@@ -4,16 +4,16 @@
     "img": "1.png",
     "impacts": {
       "yes": {
-        "ecology": 5,
+        "ecology": 2,
         "localEconomy": 7,
-        "money": -3,
+        "money": -5,
         "society": 4
       },
       "no": {
-        "ecology": -4,
+        "ecology": -2,
         "localEconomy": -6,
-        "money": 2,
-        "society": -3
+        "money": 5,
+        "society": 0
       }
     }
   },
@@ -25,13 +25,13 @@
         "ecology": 6,
         "localEconomy": 6,
         "money": -5,
-        "society": 5
+        "society": 2
       },
       "no": {
         "ecology": -5,
         "localEconomy": -5,
         "money": 3,
-        "society": -4
+        "society": -1
       }
     }
   },
@@ -40,16 +40,16 @@
     "img": "3.png",
     "impacts": {
       "yes": {
-        "ecology": 4,
-        "localEconomy": 4,
-        "money": -6,
-        "society": 3
+        "ecology": 2,
+        "localEconomy": 12,
+        "money": -10,
+        "society": -4
       },
       "no": {
-        "ecology": -3,
-        "localEconomy": -2,
-        "money": 3,
-        "society": -2
+        "ecology": -1,
+        "localEconomy": -7,
+        "money": 6,
+        "society": 2
       }
     }
   },
@@ -76,16 +76,16 @@
     "img": "5.png",
     "impacts": {
       "yes": {
-        "ecology": 7,
+        "ecology": 6,
         "localEconomy": 5,
-        "money": -4,
+        "money": -12,
         "society": 6
       },
       "no": {
-        "ecology": -5,
+        "ecology": -3,
         "localEconomy": -2,
-        "money": 2,
-        "society": -4
+        "money": 10,
+        "society": -3
       }
     }
   },
@@ -94,16 +94,16 @@
     "img": "6.png",
     "impacts": {
       "yes": {
-        "ecology": 2,
+        "ecology": 1,
         "localEconomy": 5,
-        "money": -5,
-        "society": 4
+        "money": -3,
+        "society": 2
       },
       "no": {
-        "ecology": -2,
-        "localEconomy": -6,
-        "money": 3,
-        "society": -2
+        "ecology": 0,
+        "localEconomy": -2,
+        "money": 6,
+        "society": -1
       }
     }
   },
@@ -112,16 +112,16 @@
     "img": "7.png",
     "impacts": {
       "yes": {
-        "ecology": 4,
-        "localEconomy": 7,
+        "ecology": 1,
+        "localEconomy": 3,
         "money": -5,
-        "society": 5
+        "society": 2
       },
       "no": {
-        "ecology": -2,
-        "localEconomy": -4,
+        "ecology": -1,
+        "localEconomy": -1,
         "money": 4,
-        "society": -3
+        "society": 0
       }
     }
   },
@@ -130,16 +130,16 @@
     "img": "8.png",
     "impacts": {
       "yes": {
-        "ecology": 5,
-        "localEconomy": 8,
-        "money": -4,
-        "society": 5
+        "ecology": 6,
+        "localEconomy": 7,
+        "money": -10,
+        "society": 4
       },
       "no": {
         "ecology": -4,
         "localEconomy": -6,
-        "money": 2,
-        "society": -4
+        "money": 13,
+        "society": -2
       }
     }
   },
@@ -148,15 +148,15 @@
     "img": "9.png",
     "impacts": {
       "yes": {
-        "ecology": 4,
-        "localEconomy": 5,
+        "ecology": 6,
+        "localEconomy": 6,
         "money": -6,
-        "society": 3
+        "society": 0
       },
       "no": {
         "ecology": -4,
         "localEconomy": -4,
-        "money": 4,
+        "money": 10,
         "society": -2
       }
     }
@@ -166,16 +166,16 @@
     "img": "10.png",
     "impacts": {
       "yes": {
-        "ecology": 8,
-        "localEconomy": 4,
-        "money": -7,
-        "society": 5
+        "ecology": 4,
+        "localEconomy": 2,
+        "money": -4,
+        "society": 2
       },
       "no": {
-        "ecology": -7,
-        "localEconomy": -3,
+        "ecology": -2,
+        "localEconomy": -1,
         "money": 4,
-        "society": -5
+        "society": 0
       }
     }
   },
@@ -184,7 +184,7 @@
     "img": "11.png",
     "impacts": {
       "yes": {
-        "ecology": 7,
+        "ecology": 6,
         "localEconomy": 5,
         "money": -7,
         "society": 4
@@ -204,14 +204,14 @@
       "yes": {
         "ecology": 9,
         "localEconomy": 3,
-        "money": -4,
+        "money": -8,
         "society": 6
       },
       "no": {
         "ecology": -3,
         "localEconomy": -2,
-        "money": 3,
-        "society": -5
+        "money": 13,
+        "society": -2
       }
     }
   },
@@ -228,7 +228,7 @@
       "no": {
         "ecology": -5,
         "localEconomy": -3,
-        "money": 2,
+        "money": 6,
         "society": -4
       }
     }
@@ -241,7 +241,7 @@
         "ecology": 3,
         "localEconomy": 6,
         "money": -3,
-        "society": 7
+        "society": 5
       },
       "no": {
         "ecology": 0,
@@ -256,16 +256,16 @@
     "img": "15.png",
     "impacts": {
       "yes": {
-        "ecology": 6,
-        "localEconomy": 7,
-        "money": -5,
-        "society": 6
+        "ecology": 2,
+        "localEconomy": 5,
+        "money": -2,
+        "society": 1
       },
       "no": {
-        "ecology": -1,
-        "localEconomy": -3,
-        "money": 3,
-        "society": -5
+        "ecology": -2,
+        "localEconomy": -1,
+        "money": 5,
+        "society": 0
       }
     }
   },
@@ -274,16 +274,16 @@
     "img": "16.png",
     "impacts": {
       "yes": {
-        "ecology": 5,
-        "localEconomy": 8,
-        "money": -6,
-        "society": 7
+        "ecology": 6,
+        "localEconomy": 5,
+        "money": -10,
+        "society": 4
       },
       "no": {
-        "ecology": -2,
+        "ecology": -4,
         "localEconomy": -2,
-        "money": 3,
-        "society": -4
+        "money": 7,
+        "society": -7
       }
     }
   },
@@ -292,16 +292,16 @@
     "img": "17.png",
     "impacts": {
       "yes": {
-        "ecology": 4,
-        "localEconomy": 6,
+        "ecology": 2,
+        "localEconomy": 3,
         "money": -2,
-        "society": 4
+        "society": 1
       },
       "no": {
-        "ecology": -3,
-        "localEconomy": -5,
-        "money": 1,
-        "society": -3
+        "ecology": -1,
+        "localEconomy": -1,
+        "money": 4,
+        "society": -1
       }
     }
   },
@@ -310,16 +310,16 @@
     "img": "18.png",
     "impacts": {
       "yes": {
-        "ecology": 4,
-        "localEconomy": 5,
+        "ecology": 1,
+        "localEconomy": 2,
         "money": -2,
-        "society": 5
+        "society": 2
       },
       "no": {
-        "ecology": -2,
-        "localEconomy": -4,
-        "money": 1,
-        "society": -3
+        "ecology": 0,
+        "localEconomy": -2,
+        "money": 4,
+        "society": 0
       }
     }
   },
@@ -328,34 +328,34 @@
     "img": "19.png",
     "impacts": {
       "yes": {
-        "ecology": 9,
-        "localEconomy": 2,
-        "money": -8,
-        "society": 3
+        "ecology": 7,
+        "localEconomy": -1,
+        "money": 5,
+        "society": -3
       },
       "no": {
-        "ecology": -5,
-        "localEconomy": -3,
-        "money": 5,
-        "society": -4
+        "ecology": -1,
+        "localEconomy": 1,
+        "money": 0,
+        "society": 2
       }
     }
   },
   {
-    "question": "Encourager les véhicules électriques dans la ville ?",
+    "question": "Allouer que les véhicules électriques dans la ville ?",
     "img": "20.png",
     "impacts": {
       "yes": {
         "ecology": 8,
-        "localEconomy": 4,
-        "money": -6,
-        "society": 5
+        "localEconomy": -2,
+        "money": -2,
+        "society": -6
       },
       "no": {
-        "ecology": -4,
-        "localEconomy": -2,
+        "ecology": -3,
+        "localEconomy": 2,
         "money": 3,
-        "society": -3
+        "society": 5
       }
     }
   },
@@ -364,16 +364,16 @@
     "img": "21.png",
     "impacts": {
       "yes": {
-        "ecology": 7,
-        "localEconomy": 3,
-        "money": -5,
-        "society": 6
+        "ecology": 3,
+        "localEconomy": 2,
+        "money": -4,
+        "society": -2
       },
       "no": {
         "ecology": -3,
         "localEconomy": -2,
         "money": 4,
-        "society": -2
+        "society": 2
       }
     }
   },
@@ -382,16 +382,16 @@
     "img": "22.png",
     "impacts": {
       "yes": {
-        "ecology": 8,
-        "localEconomy": 5,
+        "ecology": 5,
+        "localEconomy": 0,
         "money": -7,
         "society": 4
       },
       "no": {
-        "ecology": -5,
-        "localEconomy": -3,
+        "ecology": -3,
+        "localEconomy": 0,
         "money": 6,
-        "society": -1
+        "society": -2
       }
     }
   },
@@ -400,16 +400,16 @@
     "img": "23.png",
     "impacts": {
       "yes": {
-        "ecology": 4,
-        "localEconomy": 7,
-        "money": -6,
-        "society": 4
+        "ecology": 2,
+        "localEconomy": 5,
+        "money": -4,
+        "society": 0
       },
       "no": {
         "ecology": -2,
-        "localEconomy": -5,
-        "money": 3,
-        "society": -2
+        "localEconomy": -3,
+        "money": 4,
+        "society": 0
       }
     }
   },
@@ -419,15 +419,15 @@
     "impacts": {
       "yes": {
         "ecology": 7,
-        "localEconomy": 5,
+        "localEconomy": 1,
         "money": -8,
-        "society": 6
+        "society": 4
       },
       "no": {
-        "ecology": -3,
-        "localEconomy": -2,
-        "money": 5,
-        "society": -4
+        "ecology": -4,
+        "localEconomy": -1,
+        "money": 6,
+        "society": -2
       }
     }
   },
@@ -436,34 +436,34 @@
     "img": "25.png",
     "impacts": {
       "yes": {
-        "ecology": 9,
-        "localEconomy": 3,
-        "money": -4,
-        "society": 7
+        "ecology": 3,
+        "localEconomy": 0,
+        "money": -1,
+        "society": 2
       },
       "no": {
         "ecology": -2,
-        "localEconomy": -1,
-        "money": 2,
-        "society": -3
+        "localEconomy": 0,
+        "money": 3,
+        "society": -2
       }
     }
   },
   {
-    "question": "Encourager les entreprises à utiliser des emballages recyclés ?",
+    "question": "Forcer les entreprises à utiliser des emballages recyclés ?",
     "img": "26.png",
     "impacts": {
       "yes": {
-        "ecology": 6,
-        "localEconomy": 4,
-        "money": -3,
-        "society": 5
+        "ecology": 3,
+        "localEconomy": -2,
+        "money": 0,
+        "society": 2
       },
       "no": {
-        "ecology": -4,
-        "localEconomy": -2,
-        "money": 2,
-        "society": -2
+        "ecology": -3,
+        "localEconomy": 1,
+        "money": 0,
+        "society": -1
       }
     }
   },
@@ -472,16 +472,16 @@
     "img": "27.png",
     "impacts": {
       "yes": {
-        "ecology": 7,
-        "localEconomy": 6,
-        "money": -6,
-        "society": 5
+        "ecology": 3,
+        "localEconomy": 2,
+        "money": -2,
+        "society": 1
       },
       "no": {
-        "ecology": -3,
-        "localEconomy": -4,
-        "money": 3,
-        "society": -2
+        "ecology": -2,
+        "localEconomy": -1,
+        "money": 2,
+        "society": 0
       }
     }
   },
@@ -490,16 +490,16 @@
     "img": "28.png",
     "impacts": {
       "yes": {
-        "ecology": 6,
-        "localEconomy": 3,
+        "ecology": 3,
+        "localEconomy": 0,
         "money": -2,
-        "society": 8
+        "society": 5
       },
       "no": {
         "ecology": -2,
-        "localEconomy": -3,
+        "localEconomy": 0,
         "money": 4,
-        "society": -1
+        "society": -2
       }
     }
   },
@@ -508,16 +508,16 @@
     "img": "29.png",
     "impacts": {
       "yes": {
-        "ecology": 9,
-        "localEconomy": 4,
-        "money": -5,
-        "society": 6
+        "ecology": 3,
+        "localEconomy": 0,
+        "money": -3,
+        "society": -3
       },
       "no": {
-        "ecology": -4,
-        "localEconomy": -3,
-        "money": 3,
-        "society": -2
+        "ecology": -5,
+        "localEconomy": 0,
+        "money": 5,
+        "society": 2
       }
     }
   },
@@ -526,16 +526,16 @@
     "img": "30.png",
     "impacts": {
       "yes": {
-        "ecology": 8,
-        "localEconomy": 2,
-        "money": -7,
-        "society": 4
+        "ecology": 3,
+        "localEconomy": 1,
+        "money": 3,
+        "society": 2
       },
       "no": {
         "ecology": -3,
-        "localEconomy": -2,
-        "money": 6,
-        "society": -3
+        "localEconomy": 0,
+        "money": -3,
+        "society": -1
       }
     }
   },
@@ -544,34 +544,16 @@
     "img": "31.png",
     "impacts": {
       "yes": {
-        "ecology": 5,
-        "localEconomy": 6,
-        "money": -2,
-        "society": 7
-      },
-      "no": {
-        "ecology": -3,
-        "localEconomy": -5,
-        "money": 2,
-        "society": -4
-      }
-    }
-  },
-  {
-    "question": "Introduire des horaires de travail plus flexibles pour réduire la pollution ?",
-    "img": "32.png",
-    "impacts": {
-      "yes": {
-        "ecology": 6,
-        "localEconomy": 5,
-        "money": -3,
-        "society": 6
+        "ecology": 2,
+        "localEconomy": 0,
+        "money": -1,
+        "society": 2
       },
       "no": {
         "ecology": -2,
-        "localEconomy": -1,
-        "money": 4,
-        "society": -2
+        "localEconomy": 0,
+        "money": 2,
+        "society": 0
       }
     }
   },
@@ -580,15 +562,15 @@
     "img": "33.png",
     "impacts": {
       "yes": {
-        "ecology": 4,
-        "localEconomy": 6,
-        "money": -3,
+        "ecology": 0,
+        "localEconomy": 3,
+        "money": -4,
         "society": 8
       },
       "no": {
-        "ecology": -2,
-        "localEconomy": -4,
-        "money": 2,
+        "ecology": 0,
+        "localEconomy": 0,
+        "money": 6,
         "society": -1
       }
     }
@@ -598,16 +580,16 @@
     "img": "34.png",
     "impacts": {
       "yes": {
-        "ecology": 7,
-        "localEconomy": 3,
-        "money": -5,
-        "society": 6
+        "ecology": 2,
+        "localEconomy": 0,
+        "money": -4,
+        "society": 3
       },
       "no": {
-        "ecology": -4,
-        "localEconomy": -3,
-        "money": 4,
-        "society": -2
+        "ecology": -2,
+        "localEconomy": 0,
+        "money": 5,
+        "society": -1
       }
     }
   },
@@ -618,32 +600,14 @@
       "yes": {
         "ecology": 8,
         "localEconomy": 7,
-        "money": -6,
+        "money": -10,
         "society": 6
       },
       "no": {
         "ecology": -3,
-        "localEconomy": -2,
-        "money": 3,
-        "society": -3
-      }
-    }
-  },
-  {
-    "question": "Supprimer totalement les véhicules à essence dans la ville d'ici 10 ans ?",
-    "img": "36.png",
-    "impacts": {
-      "yes": {
-        "ecology": 10,
-        "localEconomy": 6,
-        "money": -10,
-        "society": 8
-      },
-      "no": {
-        "ecology": -5,
-        "localEconomy": -3,
-        "money": 5,
-        "society": -6
+        "localEconomy": -4,
+        "money": 15,
+        "society": -2
       }
     }
   },
@@ -654,32 +618,14 @@
       "yes": {
         "ecology": 9,
         "localEconomy": 3,
-        "money": -7,
-        "society": 7
+        "money": -12,
+        "society": 4
       },
       "no": {
         "ecology": -4,
-        "localEconomy": -6,
-        "money": 6,
-        "society": -5
-      }
-    }
-  },
-  {
-    "question": "Fermer progressivement les centrales nucléaires locales et investir massivement dans les énergies renouvelables ?",
-    "img": "38.png",
-    "impacts": {
-      "yes": {
-        "ecology": 10,
-        "localEconomy": 5,
-        "money": -8,
-        "society": 9
-      },
-      "no": {
-        "ecology": -6,
-        "localEconomy": -7,
-        "money": 8,
-        "society": -6
+        "localEconomy": -2,
+        "money": 10,
+        "society": 0
       }
     }
   },
@@ -688,16 +634,16 @@
     "img": "39.png",
     "impacts": {
       "yes": {
-        "ecology": 4,
+        "ecology": 8,
         "localEconomy": -8,
-        "money": -7,
-        "society": -5
+        "money": 0,
+        "society": 3
       },
       "no": {
-        "ecology": -3,
-        "localEconomy": 3,
-        "money": 5,
-        "society": 2
+        "ecology": -5,
+        "localEconomy": 5,
+        "money": 0,
+        "society": -1
       }
     }
   },
@@ -707,15 +653,15 @@
     "impacts": {
       "yes": {
         "ecology": 6,
-        "localEconomy": 3,
+        "localEconomy": 0,
         "money": -2,
         "society": 5
       },
       "no": {
         "ecology": -4,
-        "localEconomy": -2,
-        "money": 1,
-        "society": -3
+        "localEconomy": 0,
+        "money": 3,
+        "society": 0
       }
     }
   },
@@ -726,14 +672,14 @@
       "yes": {
         "ecology": -6,
         "localEconomy": -5,
-        "money": 8,
+        "money": 12,
         "society": 6
       },
       "no": {
-        "ecology": 2,
-        "localEconomy": 4,
-        "money": 3,
-        "society": 0
+        "ecology": 5,
+        "localEconomy": 6,
+        "money": -6,
+        "society": -4
       }
     }
   },
@@ -742,10 +688,10 @@
     "img": "41.png",
     "impacts": {
       "yes": {
-        "ecology": -5,
+        "ecology": -3,
         "localEconomy": -3,
         "money": 7,
-        "society": 5
+        "society": 2
       },
       "no": {
         "ecology": 3,
@@ -760,14 +706,14 @@
     "img": "41.png",
     "impacts": {
       "yes": {
-        "ecology": -10,
-        "localEconomy": -9,
+        "ecology": -2,
+        "localEconomy": -6,
         "money": 10,
-        "society": 0
+        "society": 2
       },
       "no": {
-        "ecology": 2,
-        "localEconomy": 7,
+        "ecology": 5,
+        "localEconomy": 4,
         "money": -5,
         "society": 0
       }
@@ -778,15 +724,15 @@
     "img": "41.png",
     "impacts": {
       "yes": {
-        "ecology": -9,
-        "localEconomy": -6,
-        "money": -5,
-        "society": 12
+        "ecology": -4,
+        "localEconomy": 3,
+        "money": 10,
+        "society": 4
       },
       "no": {
         "ecology": 3,
         "localEconomy": 5,
-        "money": 4,
+        "money": -4,
         "society": -2
       }
     }
@@ -796,34 +742,16 @@
     "img": "41.png",
     "impacts": {
       "yes": {
-        "ecology": -6,
-        "localEconomy": -3,
-        "money": 8,
-        "society": 5
+        "ecology": -7,
+        "localEconomy": -5,
+        "money": 13,
+        "society": 6
       },
       "no": {
-        "ecology": 2,
-        "localEconomy": 4,
-        "money": 2,
-        "society": 3
-      }
-    }
-  },
-  {
-    "question": "Développer des zones commerciales sans restrictions écologiques strictes ?",
-    "img": "41.png",
-    "impacts": {
-      "yes": {
-        "ecology": -12,
-        "localEconomy": -2,
-        "money": 15,
-        "society": 4
-      },
-      "no": {
-        "ecology": 1,
-        "localEconomy": 3,
-        "money": 2,
-        "society": 3
+        "ecology": 5,
+        "localEconomy": 6,
+        "money": -5,
+        "society": -2
       }
     }
   },
@@ -833,15 +761,15 @@
     "impacts": {
       "yes": {
         "ecology": -10,
-        "localEconomy": -2,
-        "money": 12,
-        "society": 6
+        "localEconomy": 5,
+        "money": 10,
+        "society": -2
       },
       "no": {
-        "ecology": 2,
-        "localEconomy": 4,
-        "money": 3,
-        "society": 2
+        "ecology": 7,
+        "localEconomy": -2,
+        "money": -5,
+        "society": 3
       }
     }
   },
@@ -856,10 +784,10 @@
         "society": 5
       },
       "no": {
-        "ecology": 1,
-        "localEconomy": 3,
-        "money": 4,
-        "society": 2
+        "ecology": 6,
+        "localEconomy": 4,
+        "money": -4,
+        "society": -3
       }
     }
   },
@@ -871,31 +799,13 @@
         "ecology": 8,
         "localEconomy": -6,
         "money": -5,
-        "society": -3
+        "society": 3
       },
       "no": {
         "ecology": -4,
         "localEconomy": 3,
-        "money": 2,
-        "society": 1
-      }
-    }
-  },
-  {
-    "question": "Interdire les engrais chimiques dans l'agriculture locale ?",
-    "img": "42.png",
-    "impacts": {
-      "yes": {
-        "ecology": 7,
-        "localEconomy": 5,
-        "money": -4,
+        "money": 5,
         "society": -2
-      },
-      "no": {
-        "ecology": -3,
-        "localEconomy": -1,
-        "money": 2,
-        "society": 1
       }
     }
   },
@@ -907,13 +817,13 @@
         "ecology": 8,
         "localEconomy": -5,
         "money": -3,
-        "society": 1
+        "society": 4
       },
       "no": {
         "ecology": -4,
         "localEconomy": 3,
         "money": 2,
-        "society": 2
+        "society": 0
       }
     }
   },
@@ -924,31 +834,31 @@
       "yes": {
         "ecology": 9,
         "localEconomy": -5,
-        "money": -4,
-        "society": -2
+        "money": 0,
+        "society": 3
       },
       "no": {
         "ecology": -5,
-        "localEconomy": 2,
-        "money": 2,
-        "society": 1
+        "localEconomy": 4,
+        "money": 0,
+        "society": 0
       }
     }
   },
   {
-    "question": "Interdire l'importation de produits agricoles non bio dans la commune ?",
+    "question": "Interdire les produits agricoles non bio dans la commune ?",
     "img": "42.png",
     "impacts": {
       "yes": {
-        "ecology": 8,
-        "localEconomy": -7,
-        "money": -5,
-        "society": -4
+        "ecology": 15,
+        "localEconomy": -8,
+        "money": -6,
+        "society": -2
       },
       "no": {
         "ecology": -4,
-        "localEconomy": 3,
-        "money": 2,
+        "localEconomy": 5,
+        "money": 3,
         "society": 2
       }
     }
@@ -958,16 +868,16 @@
     "img": "42.png",
     "impacts": {
       "yes": {
-        "ecology": 9,
+        "ecology": 5,
         "localEconomy": -6,
-        "money": -6,
-        "society": -3
+        "money": 4,
+        "society": 3
       },
       "no": {
-        "ecology": -5,
-        "localEconomy": 2,
-        "money": 2,
-        "society": 1
+        "ecology": -3,
+        "localEconomy": 5,
+        "money": 0,
+        "society": 0
       }
     }
   },
@@ -976,34 +886,16 @@
     "img": "42.png",
     "impacts": {
       "yes": {
-        "ecology": 7,
-        "localEconomy": -4,
-        "money": -5,
-        "society": -2
+        "ecology": 5,
+        "localEconomy": 2,
+        "money": -2,
+        "society": 2
       },
       "no": {
         "ecology": -3,
-        "localEconomy": 3,
-        "money": 2,
-        "society": 1
-      }
-    }
-  },
-  {
-    "question": "Interdire la culture de certaines plantes non autochtones nuisibles à l'écosystème local ?",
-    "img": "42.png",
-    "impacts": {
-      "yes": {
-        "ecology": 9,
-        "localEconomy": -5,
-        "money": -4,
-        "society": -3
-      },
-      "no": {
-        "ecology": -4,
-        "localEconomy": 2,
-        "money": 2,
-        "society": 1
+        "localEconomy": 0,
+        "money": 0,
+        "society": 0
       }
     }
   },
@@ -1013,15 +905,15 @@
     "impacts": {
       "yes": {
         "ecology": 6,
-        "localEconomy": -4,
-        "money": -3,
-        "society": 4
+        "localEconomy": 2,
+        "money": -4,
+        "society": 2
       },
       "no": {
-        "ecology": -2,
-        "localEconomy": 2,
-        "money": 3,
-        "society": 1
+        "ecology": -3,
+        "localEconomy": 0,
+        "money": 5,
+        "society": 0
       }
     }
   }
