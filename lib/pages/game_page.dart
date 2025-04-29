@@ -87,6 +87,7 @@ class _GamePageState extends State<GamePage> {
         appBar: AppBar(title: Text("Green Town")),
         body: currentIndex < questions.length
             ? Column(
+          mainAxisSize: MainAxisSize.max,
           children: [
             Padding(
               padding: EdgeInsets.all(8),
@@ -110,16 +111,18 @@ class _GamePageState extends State<GamePage> {
             ),
             Expanded(
               child: CardSwiper(
+                isLoop: false,
                 controller: controller,
                 cardsCount: 2,
                 onSwipe: _onSwipe,
                 cardBuilder: (context, index, horizontalThresholdPercentage, verticalThresholdPercentage) => Card(
                   child: Column(
+                    mainAxisSize: MainAxisSize.max,
                     children: [
                       // Image.asset('assets/${questions[currentIndex].img}',
                       //     fit: BoxFit.cover, height: 200),
                       SizedBox(height: 10),
-                      Text('Swipez → oui  •  ← non'),
+                      Center(child: Text('← non  •  oui →')),
                     ],
                   ),
                 ),
