@@ -17,6 +17,7 @@ class GamePage extends StatefulWidget {
 class _GamePageState extends State<GamePage> {
   final CardSwiperController controller = CardSwiperController();
 
+  List<Widget> cards = [];
   int ecology = 50;
   int localEconomy = 50;
   int money = 50;
@@ -29,8 +30,55 @@ class _GamePageState extends State<GamePage> {
     int? currentIndex,
     CardSwiperDirection direction,
   ) {
-    // Update score
+    if (currentIndex == null) return false;
+    setState(() {
+      this.currentIndex = currentIndex;
+      if (direction == CardSwiperDirection.left) {
+        ecology += CardData.cards[currentIndex].impacts.no.ecology;
+        localEconomy += CardData.cards[currentIndex].impacts.no.localEconomy;
+        money += CardData.cards[currentIndex].impacts.no.money;
+        society += CardData.cards[currentIndex].impacts.no.society;
+      } else if (direction == CardSwiperDirection.right) {
+        ecology += CardData.cards[currentIndex].impacts.yes.ecology;
+        localEconomy += CardData.cards[currentIndex].impacts.yes.localEconomy;
+        money += CardData.cards[currentIndex].impacts.yes.money;
+        society += CardData.cards[currentIndex].impacts.yes.society;
+      }
+      ecology = ecology.clamp(0, 100);
+      localEconomy = localEconomy.clamp(0, 100);
+      money = money.clamp(0, 100);
+      society = society.clamp(0, 100);
+    });
     return true;
+  }
+
+  void buildCards() {
+    for (int i = 0; i < CardData.cards.length; i++) {
+      cards.add(
+        Card(
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                '${ImagePaths.assetsPath}${CardData.cards[i].img}',
+                fit: BoxFit.cover,
+                height: 200,
+              ),
+              SizedBox(height: 10),
+              Center(),
+            ],
+          ),
+        ),
+      );
+    }
+  }
+
+  @override
+  void initState() {
+    buildCards();
+    super.initState();
   }
 
   @override
@@ -82,20 +130,7 @@ class _GamePageState extends State<GamePage> {
                               index,
                               horizontalThresholdPercentage,
                               verticalThresholdPercentage,
-                            ) => Card(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Image.asset(
-                                    '${ImagePaths.assetsPath}${CardData.cards[currentIndex].img}',
-                                    fit: BoxFit.cover,
-                                    height: 200,
-                                  ),
-                                  SizedBox(height: 10),
-                                  Center(child: Text('← non  •  oui →')),
-                                ],
-                              ),
-                            ),
+                            ) => cards[currentIndex],
                       ),
                     ),
                   ],

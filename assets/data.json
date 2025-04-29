@@ -49,7 +49,7 @@
   },
   {
     "question": "Subventionner des restaurants utilisant des produits locaux ?",
-    "img": "1.png",
+    "img": "7.png",
     "impacts": {
       "yes": { "ecology": 4, "localEconomy": 7, "money": -5, "society": 5 },
       "no": { "ecology": -2, "localEconomy": -4, "money": 4, "society": -3 }
@@ -57,7 +57,7 @@
   },
   {
     "question": "Favoriser l'implantation d'entreprises locales durables ?",
-    "img": "2.png",
+    "img": "8.png",
     "impacts": {
       "yes": { "ecology": 5, "localEconomy": 8, "money": -4, "society": 5 },
       "no": { "ecology": -4, "localEconomy": -6, "money": 2, "society": -4 }
@@ -65,7 +65,7 @@
   },
   {
     "question": "Limiter l'installation de multinationales sur la commune ?",
-    "img": "3.png",
+    "img": "9.png",
     "impacts": {
       "yes": { "ecology": 4, "localEconomy": 5, "money": -6, "society": 3 },
       "no": { "ecology": -4, "localEconomy": -4, "money": 4, "society": -2 }
@@ -73,7 +73,7 @@
   },
   {
     "question": "Investir dans un réseau de transport public écoresponsable ?",
-    "img": "4.png",
+    "img": "10.png",
     "impacts": {
       "yes": { "ecology": 8, "localEconomy": 4, "money": -7, "society": 5 },
       "no": { "ecology": -7, "localEconomy": -3, "money": 4, "society": -5 }
@@ -81,7 +81,7 @@
   },
   {
     "question": "Installer des panneaux solaires sur les bâtiments publics ?",
-    "img": "5.png",
+    "img": "11.png",
     "impacts": {
       "yes": { "ecology": 7, "localEconomy": 5, "money": -7, "society": 4 },
       "no": { "ecology": -4, "localEconomy": -4, "money": 5, "society": -3 }
@@ -89,7 +89,7 @@
   },
   {
     "question": "Planter 1000 arbres dans les espaces publics ?",
-    "img": "6.png",
+    "img": "12.png",
     "impacts": {
       "yes": { "ecology": 9, "localEconomy": 3, "money": -4, "society": 6 },
       "no": { "ecology": -3, "localEconomy": -2, "money": 3, "society": -5 }
@@ -97,7 +97,7 @@
   },
   {
     "question": "Développer des pistes cyclables en ville ?",
-    "img": "1.png",
+    "img": "13.png",
     "impacts": {
       "yes": { "ecology": 7, "localEconomy": 4, "money": -4, "society": 5 },
       "no": { "ecology": -5, "localEconomy": -3, "money": 2, "society": -4 }
@@ -105,7 +105,7 @@
   },
   {
     "question": "Organiser une fête annuelle des produits locaux ?",
-    "img": "2.png",
+    "img": "14.png",
     "impacts": {
       "yes": { "ecology": 3, "localEconomy": 6, "money": -3, "society": 7 },
       "no": { "ecology": 0, "localEconomy":-2, "money": 1, "society": -4 }
@@ -113,7 +113,7 @@
   },
   {
     "question": "Proposer des formations pour futurs agriculteurs bio ?",
-    "img": "3.png",
+    "img": "15.png",
     "impacts": {
       "yes": { "ecology": 6, "localEconomy": 7, "money": -5, "society": 6 },
       "no": { "ecology": -1, "localEconomy": -3, "money": 3, "society": -5 }
@@ -121,7 +121,7 @@
   },
   {
     "question": "Financer une cantine scolaire 100% locale ?",
-    "img": "4.png",
+    "img": "16.png",
     "impacts": {
       "yes": { "ecology": 5, "localEconomy": 8, "money": -6, "society": 7 },
       "no": { "ecology": -2, "localEconomy": -2, "money": 3, "society": -4 }

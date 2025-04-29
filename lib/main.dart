@@ -23,7 +23,7 @@ class GreenTown extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Green town',
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
