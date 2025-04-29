@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../Model/CardData.dart';
 import 'game_page.dart';
 
 class HomePage extends StatefulWidget {
