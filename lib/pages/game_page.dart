@@ -190,7 +190,7 @@ class _GamePageState extends State<GamePage> {
   }
 
   bool _onSwipeTuto(int prev, int? curr, CardSwiperDirection direction) {
-    if (direction == CardSwiperDirection.left || direction == CardSwiperDirection.right) {
+    if (direction == CardSwiperDirection.left) {
       setState(() => isTuto = false);
     }
     return true;
