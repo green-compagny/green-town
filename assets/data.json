@@ -1,0 +1,146 @@
+[
+  {
+    "question": "Lancer un marché hebdomadaire 100% producteurs locaux ?",
+    "img": "1.png",
+    "impacts": {
+      "yes": { "ecology": 5, "localEconomy": 7, "money": -3, "society": 4 },
+      "no": { "ecology": -4, "localEconomy": -6, "money": 2, "society": -3 }
+    }
+  },
+  {
+    "question": "Mettre en place une prime pour les fermes locales bio ?",
+    "img": "2.png",
+    "impacts": {
+      "yes": { "ecology": 6, "localEconomy": 6, "money": -5, "society": 5 },
+      "no": { "ecology": -5, "localEconomy": -5, "money": 3, "society": -4 }
+    }
+  },
+  {
+    "question": "Interdire les grandes surfaces en centre-ville ?",
+    "img": "3.png",
+    "impacts": {
+      "yes": { "ecology": 4, "localEconomy": 4, "money": -6, "society": 3 },
+      "no": { "ecology": -3, "localEconomy": -2, "money": 3, "society": -2 }
+    }
+  },
+  {
+    "question": "Créer un festival des artisans et producteurs locaux ?",
+    "img": "4.png",
+    "impacts": {
+      "yes": { "ecology": 3, "localEconomy": 6, "money": -2, "society": 7 },
+      "no": { "ecology": -2, "localEconomy": -4, "money": 1, "society": -4 }
+    }
+  },
+  {
+    "question": "Réserver des terrains municipaux pour des jardins partagés ?",
+    "img": "5.png",
+    "impacts": {
+      "yes": { "ecology": 7, "localEconomy": 5, "money": -4, "society": 6 },
+      "no": { "ecology": -5, "localEconomy": -2, "money": 2, "society": -4 }
+    }
+  },
+  {
+    "question": "Donner des aides aux commerces de centre-ville ?",
+    "img": "6.png",
+    "impacts": {
+      "yes": { "ecology": 2, "localEconomy": 5, "money": -5, "society": 4 },
+      "no": { "ecology": -2, "localEconomy": -6, "money": 3, "society": -2 }
+    }
+  },
+  {
+    "question": "Subventionner des restaurants utilisant des produits locaux ?",
+    "img": "7.png",
+    "impacts": {
+      "yes": { "ecology": 4, "localEconomy": 7, "money": -5, "society": 5 },
+      "no": { "ecology": -2, "localEconomy": -4, "money": 4, "society": -3 }
+    }
+  },
+  {
+    "question": "Favoriser l'implantation d'entreprises locales durables ?",
+    "img": "8.png",
+    "impacts": {
+      "yes": { "ecology": 5, "localEconomy": 8, "money": -4, "society": 5 },
+      "no": { "ecology": -4, "localEconomy": -6, "money": 2, "society": -4 }
+    }
+  },
+  {
+    "question": "Limiter l'installation de multinationales sur la commune ?",
+    "img": "9.png",
+    "impacts": {
+      "yes": { "ecology": 4, "localEconomy": 5, "money": -6, "society": 3 },
+      "no": { "ecology": -4, "localEconomy": -4, "money": 4, "society": -2 }
+    }
+  },
+  {
+    "question": "Investir dans un réseau de transport public écoresponsable ?",
+    "img": "10.png",
+    "impacts": {
+      "yes": { "ecology": 8, "localEconomy": 4, "money": -7, "society": 5 },
+      "no": { "ecology": -7, "localEconomy": -3, "money": 4, "society": -5 }
+    }
+  },
+  {
+    "question": "Installer des panneaux solaires sur les bâtiments publics ?",
+    "img": "11.png",
+    "impacts": {
+      "yes": { "ecology": 7, "localEconomy": 5, "money": -7, "society": 4 },
+      "no": { "ecology": -4, "localEconomy": -4, "money": 5, "society": -3 }
+    }
+  },
+  {
+    "question": "Planter 1000 arbres dans les espaces publics ?",
+    "img": "12.png",
+    "impacts": {
+      "yes": { "ecology": 9, "localEconomy": 3, "money": -4, "society": 6 },
+      "no": { "ecology": -3, "localEconomy": -2, "money": 3, "society": -5 }
+    }
+  },
+  {
+    "question": "Développer des pistes cyclables en ville ?",
+    "img": "13.png",
+    "impacts": {
+      "yes": { "ecology": 7, "localEconomy": 4, "money": -4, "society": 5 },
+      "no": { "ecology": -5, "localEconomy": -3, "money": 2, "society": -4 }
+    }
+  },
+  {
+    "question": "Organiser une fête annuelle des produits locaux ?",
+    "img": "14.png",
+    "impacts": {
+      "yes": { "ecology": 3, "localEconomy": 6, "money": -3, "society": 7 },
+      "no": { "ecology": 0, "localEconomy":-2, "money": 1, "society": -4 }
+    }
+  },
+  {
+    "question": "Proposer des formations pour futurs agriculteurs bio ?",
+    "img": "15.png",
+    "impacts": {
+      "yes": { "ecology": 6, "localEconomy": 7, "money": -5, "society": 6 },
+      "no": { "ecology": -1, "localEconomy": -3, "money": 3, "society": -5 }
+    }
+  },
+  {
+    "question": "Financer une cantine scolaire 100% locale ?",
+    "img": "16.png",
+    "impacts": {
+      "yes": { "ecology": 5, "localEconomy": 8, "money": -6, "society": 7 },
+      "no": { "ecology": -2, "localEconomy": -2, "money": 3, "society": -4 }
+    }
+  },
+  {
+    "question": "Créer un label 'Ville durable' pour les commerces ?",
+    "img": "5.png",
+    "impacts": {
+      "yes": { "ecology": 4, "localEconomy": 6, "money": -2, "society": 4 },
+      "no": { "ecology": -3, "localEconomy": -5, "money": 1, "society": -3 }
+    }
+  },
+  {
+    "question": "Ouvrir un centre d'information sur la consommation locale ?",
+    "img": "6.png",
+    "impacts": {
+      "yes": { "ecology": 4, "localEconomy": 5, "money": -2, "society": 5 },
+      "no": { "ecology": -2, "localEconomy": -4, "money": 1, "society": -3 }
+    }
+  }
+]
