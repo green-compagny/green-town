@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:green_town/Model/CardData.dart';
 import 'package:green_town/constants/images_path.dart';
@@ -35,16 +36,38 @@ class _GamePageState extends State<GamePage> {
       context: context,
       builder: (context) => AlertDialog(
         title: Text('Partie terminée'),
-        content: Text('Une jauge est tombée à zéro.'),
+        content: Text('Vous avez fini le jeu, bien joué ! Vous n\'avez pas perdu. Cliquez sur OK pour recommencer.'),
         actions: [
           TextButton(
-            onPressed: () => Navigator.of(context).pop(),
+            onPressed: () {
+              Navigator.of(context).pop(); // Ferme la boîte de dialogue
+              Navigator.pop(context); // Ferme la page actuelle et revient en arrière
+            },
             child: Text('OK'),
           ),
         ],
       ),
     );
   }
+  void loseGame() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Partie terminée'),
+        content: Text('Vous avez perdu ! Une des jauges est arrivée à zéro.'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop(); // Ferme la boîte de dialogue
+              Navigator.pop(context); // Ferme la page actuelle et revient en arrière
+            },
+            child: Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
+
   void _onEndtuto(){
     setState(() {
       isTuto=false;
@@ -74,8 +97,15 @@ class _GamePageState extends State<GamePage> {
       localEconomy = localEconomy.clamp(0, 100);
       money = money.clamp(0, 100);
       society = society.clamp(0, 100);
+      gameIsLoos();
     });
     return true;
+  }
+
+  void gameIsLoos(){
+    if(ecology == 0 || localEconomy == 0 || money == 0 || society == 0){
+      loseGame();
+    }
   }
 
   bool _onSwipetuto(
@@ -219,87 +249,105 @@ class _GamePageState extends State<GamePage> {
     super.initState();
   }
 
+  void _handleKeyEvent(RawKeyEvent event) {
+    if (event is RawKeyDownEvent) {
+      if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
+        // Simule un swipe à gauche
+        controller.swipe(CardSwiperDirection.left);
+      } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
+        // Simule un swipe à droite
+        controller.swipe(CardSwiperDirection.right);
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: Text("Green Town")),
         body:
-            currentIndex < CardData.cards.length
-                ? Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Padding(
-                      padding: EdgeInsets.all(8),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          _buildCounter("Écologie", ecology, Colors.green),
-                          _buildCounter(
-                            "Économie locale",
-                            localEconomy,
-                            Colors.orange,
+              RawKeyboardListener(
+                focusNode: FocusNode(),
+                onKey: _handleKeyEvent, // Écoute des événements clavier
+                child:
+                currentIndex < CardData.cards.length
+                    ? Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.all(8),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: [
+                              _buildCounter("Écologie", ecology, Colors.green),
+                              _buildCounter(
+                                "Économie locale",
+                                localEconomy,
+                                Colors.orange,
+                              ),
+                              _buildCounter("Argent", money, Colors.blue),
+                              _buildCounter("Société", society, Colors.purple),
+                            ],
                           ),
-                          _buildCounter("Argent", money, Colors.blue),
-                          _buildCounter("Société", society, Colors.purple),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(16.0),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(16.0),
+                          child: Text(
+                            isTuto ? "Tutoriel" :CardData.cards[currentIndex].question,
+                            style: const TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        isTuto
+                            ? Expanded(
+                          child: CardSwiper(
+                            key: const ValueKey('tuto'),
+                            isLoop: false,
+                            controller: controllertuto,
+                            cardsCount: tutoCards.length,
+                            onSwipe: _onSwipetuto,
+                            onEnd: _onEndtuto,
+                            allowedSwipeDirection: const AllowedSwipeDirection.only(
+                              left: true,
+                              right: true,
+                              down: false,
+                              up: false,
+                            ),
+                            numberOfCardsDisplayed: 1,
+                            cardBuilder: (context, index, _, __) => tutoCards[index],
+                          ),
+                        )
+                            : Expanded(
+                          child: CardSwiper(
+                            key: const ValueKey('jeu'),
+                            isLoop: false,
+                            controller: controller,
+                            cardsCount: cards.length,
+                            onSwipe: _onSwipe,
+                            onEnd: _onEnd,
+                            allowedSwipeDirection: const AllowedSwipeDirection.only(
+                              left: true,
+                              right: true,
+                              down: false,
+                              up: false,
+                            ),
+                            numberOfCardsDisplayed: 4,
+                            cardBuilder: (context, index, _, __) => cards[index],
+                          ),
+                        )
+                      ],
+                    )
+                    : Center(
                       child: Text(
-                        isTuto ? "Tutoriel" :CardData.cards[currentIndex].question,
-                        style: const TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                        textAlign: TextAlign.center,
+                        "Merci ! Vous avez répondu à toutes les questions.",
                       ),
                     ),
-                    isTuto
-                        ? Expanded(
-                      child: CardSwiper(
-                        key: const ValueKey('tuto'),
-                        isLoop: false,
-                        controller: controllertuto,
-                        cardsCount: tutoCards.length,
-                        onSwipe: _onSwipetuto,
-                        onEnd: _onEndtuto,
-                        allowedSwipeDirection: const AllowedSwipeDirection.only(
-                          left: true,
-                          right: true,
-                          down: false,
-                          up: false,
-                        ),
-                        numberOfCardsDisplayed: 1,
-                        cardBuilder: (context, index, _, __) => tutoCards[index],
-                      ),
-                    )
-                        : Expanded(
-                      child: CardSwiper(
-                        key: const ValueKey('jeu'),
-                        isLoop: false,
-                        controller: controller,
-                        cardsCount: cards.length,
-                        onSwipe: _onSwipe,
-                        onEnd: _onEnd,
-                        allowedSwipeDirection: const AllowedSwipeDirection.only(
-                          left: true,
-                          right: true,
-                          down: false,
-                          up: false,
-                        ),
-                        numberOfCardsDisplayed: 4,
-                        cardBuilder: (context, index, _, __) => cards[index],
-                      ),
-                    )
-                  ],
-                )
-                : Center(
-                  child: Text(
-                    "Merci ! Vous avez répondu à toutes les questions.",
-                  ),
-                ),
+
+            ),
       ),
     );
   }
