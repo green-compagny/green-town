@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_tindercard/flutter_tindercard.dart';
+import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 
 void main() {
   runApp(GamePage());
@@ -31,9 +31,18 @@ class GamePage extends StatefulWidget {
 }
 
 class _GamePageState extends State<GamePage> {
+  final CardSwiperController controller = CardSwiperController();
   List<QuestionData> questions = [
     QuestionData.fromJson({
       "question": "Lancer un marché hebdomadaire 100% producteurs locaux ?",
+      "img": "img.png",
+      "impacts": {
+        "yes": {"ecology": 5, "localEconomy": 7, "money": -3, "society": 4},
+        "no": {"ecology": -4, "localEconomy": -6, "money": 2, "society": -3}
+      }
+    }),
+    QuestionData.fromJson({
+      "question": "Question 2 ?",
       "img": "img.png",
       "impacts": {
         "yes": {"ecology": 5, "localEconomy": 7, "money": -3, "society": 4},
@@ -60,11 +69,22 @@ class _GamePageState extends State<GamePage> {
     });
   }
 
+  bool _onSwipe(
+      int previousIndex,
+      int? currentIndex,
+      CardSwiperDirection direction,
+      ) {
+    debugPrint(
+      'The card $previousIndex was swiped to the ${direction.name}. Now the card $currentIndex is on top',
+    );
+    return true;
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Décisions Citoyennes")),
+        appBar: AppBar(title: Text("Green Town")),
         body: currentIndex < questions.length
             ? Column(
           children: [
@@ -89,32 +109,20 @@ class _GamePageState extends State<GamePage> {
               ),
             ),
             Expanded(
-              child: TinderSwapCard(
-                orientation: AmassOrientation.BOTTOM,
-                totalNum: 1,
-                stackNum: 1,
-                swipeEdge: 4.0,
-                maxWidth: MediaQuery.of(context).size.width * 0.9,
-                maxHeight: MediaQuery.of(context).size.height * 0.6,
-                minWidth: MediaQuery.of(context).size.width * 0.8,
-                minHeight: MediaQuery.of(context).size.height * 0.5,
-                cardBuilder: (context, index) => Card(
+              child: CardSwiper(
+                controller: controller,
+                cardsCount: 2,
+                onSwipe: _onSwipe,
+                cardBuilder: (context, index, horizontalThresholdPercentage, verticalThresholdPercentage) => Card(
                   child: Column(
                     children: [
-                      Image.asset('assets/${questions[currentIndex].img}', fit: BoxFit.cover, height: 200),
+                      // Image.asset('assets/${questions[currentIndex].img}',
+                      //     fit: BoxFit.cover, height: 200),
                       SizedBox(height: 10),
-                      Text('Swipez à droite pour "Oui", à gauche pour "Non"'),
+                      Text('Swipez → oui  •  ← non'),
                     ],
                   ),
                 ),
-                swipeUpdateCallback: (DragUpdateDetails details, Alignment align) {},
-                swipeCompleteCallback: (CardSwipeOrientation orientation, int index) {
-                  if (orientation == CardSwipeOrientation.RIGHT) {
-                    applyImpact("yes");
-                  } else if (orientation == CardSwipeOrientation.LEFT) {
-                    applyImpact("no");
-                  }
-                },
               ),
             ),
           ],
