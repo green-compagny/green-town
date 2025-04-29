@@ -16,16 +16,21 @@ class GamePage extends StatefulWidget {
 
 class _GamePageState extends State<GamePage> {
   final CardSwiperController controller = CardSwiperController();
+  final CardSwiperController controllertuto = CardSwiperController();
 
   List<Widget> cards = [];
+  List<Widget> tutoCards = [];
   int ecology = 50;
   int localEconomy = 50;
   int money = 50;
   int society = 50;
 
+  bool isTuto = true;
+
   int currentIndex = 0;
 
   void _onEnd() {
+    this.currentIndex++;
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
@@ -40,7 +45,11 @@ class _GamePageState extends State<GamePage> {
       ),
     );
   }
-
+  void _onEndtuto(){
+    setState(() {
+      isTuto=false;
+    });
+  }
 
   bool _onSwipe(
     int previousIndex,
@@ -66,6 +75,19 @@ class _GamePageState extends State<GamePage> {
       money = money.clamp(0, 100);
       society = society.clamp(0, 100);
     });
+    return true;
+  }
+
+  bool _onSwipetuto(
+      int previousIndex,
+      int? currentIndex,
+      CardSwiperDirection direction,
+      ){
+    if (direction == CardSwiperDirection.left){
+      setState(() {
+        isTuto=false;
+      });
+    }
     return true;
   }
 
@@ -121,6 +143,74 @@ class _GamePageState extends State<GamePage> {
         ),
       );
     }
+    tutoCards.add(
+      Card(
+        margin: const EdgeInsets.all(16),
+        elevation: 4,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Texte explicatif
+              const Text(
+                'Bienvenue, Maire de Green Town !\n\n'
+                    'Votre mission : prendre des décisions pour équilibrer écologie, économie locale, budget et société.\n\n'
+                    'Swipez à droite pour accepter une proposition ✅,\nSwipez à gauche pour la refuser ❌.\n\n'
+                    'Essayez maintenant de swiper à droite ou à gauche pour passer ce tutoriel.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16),
+              ),
+              const SizedBox(height: 24),
+              Image.asset(
+                'assets/images/personne1.png', // mets l'image ici
+                height: 150,
+                fit: BoxFit.contain,
+              ),
+
+            ],
+          ),
+        ),
+      ),
+    );
+    tutoCards.add(
+      Card(
+        margin: const EdgeInsets.all(16),
+        elevation: 4,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              // Texte explicatif
+              const Text(
+                'Chaque décision que vous prenez influence 4 jauges :\n\n'
+                    '🌍 Écologie '
+                    '🏘️ Économie locale\n'
+                    '💸 Argent '
+                    '👥 Société\n\n'
+                    'Toutes commencent à 50. Si l’une tombe à 0, vous perdez.\n'
+                    'Si vous atteignez 100, c’est le maximum !\n\n'
+                    'La partie se termine après 40 décisions : vous serez alors jugé sur votre gestion.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 16),
+              ),
+              const SizedBox(height: 16),
+              Image.asset(
+                'assets/images/point.png',
+                height: 150,
+                fit: BoxFit.contain,
+              ),
+              Image.asset(
+                'assets/images/personne2.png',
+                height: 150,
+                fit: BoxFit.contain,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 
   @override
@@ -158,32 +248,51 @@ class _GamePageState extends State<GamePage> {
                     Padding(
                       padding: const EdgeInsets.all(16.0),
                       child: Text(
-                        CardData.cards[currentIndex].question,
-                        style: TextStyle(
+                        isTuto ? "Tutoriel" :CardData.cards[currentIndex].question,
+                        style: const TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
                         ),
                         textAlign: TextAlign.center,
                       ),
                     ),
-                    Expanded(
+                    isTuto
+                        ? Expanded(
                       child: CardSwiper(
+                        key: const ValueKey('tuto'),
+                        isLoop: false,
+                        controller: controllertuto,
+                        cardsCount: tutoCards.length,
+                        onSwipe: _onSwipetuto,
+                        onEnd: _onEndtuto,
+                        allowedSwipeDirection: const AllowedSwipeDirection.only(
+                          left: true,
+                          right: true,
+                          down: false,
+                          up: false,
+                        ),
+                        numberOfCardsDisplayed: 1,
+                        cardBuilder: (context, index, _, __) => tutoCards[index],
+                      ),
+                    )
+                        : Expanded(
+                      child: CardSwiper(
+                        key: const ValueKey('jeu'),
                         isLoop: false,
                         controller: controller,
-                        cardsCount: CardData.cards.length,
+                        cardsCount: cards.length,
                         onSwipe: _onSwipe,
                         onEnd: _onEnd,
-                        allowedSwipeDirection: AllowedSwipeDirection.only(left: true,right: true,down: false,up: false),
+                        allowedSwipeDirection: const AllowedSwipeDirection.only(
+                          left: true,
+                          right: true,
+                          down: false,
+                          up: false,
+                        ),
                         numberOfCardsDisplayed: 4,
-                        cardBuilder:
-                            (
-                              context,
-                              index,
-                              horizontalThresholdPercentage,
-                              verticalThresholdPercentage,
-                            ) => cards[currentIndex],
+                        cardBuilder: (context, index, _, __) => cards[index],
                       ),
-                    ),
+                    )
                   ],
                 )
                 : Center(
