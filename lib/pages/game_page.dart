@@ -25,12 +25,29 @@ class _GamePageState extends State<GamePage> {
 
   int currentIndex = 0;
 
+  void _onEnd() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Partie terminée'),
+        content: Text('Une jauge est tombée à zéro.'),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
+
+
   bool _onSwipe(
     int previousIndex,
     int? currentIndex,
     CardSwiperDirection direction,
   ) {
-    if (currentIndex == null) return false;
+    if (currentIndex == null) return true;
     setState(() {
       this.currentIndex = currentIndex;
       if (direction == CardSwiperDirection.left) {
@@ -67,7 +84,38 @@ class _GamePageState extends State<GamePage> {
                 height: 200,
               ),
               SizedBox(height: 10),
-              Center(),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    // Bouton rouge (refus)
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.red,
+                        shape: BoxShape.circle,
+                      ),
+                      child: IconButton(
+                        icon: Icon(Icons.close, color: Colors.white),
+                        onPressed: () => controller.swipe(CardSwiperDirection.left),
+                      ),
+                    ),
+
+                    // Bouton vert (validation)
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.green,
+                        shape: BoxShape.circle,
+                      ),
+                      child: IconButton(
+                        icon: Icon(Icons.check, color: Colors.white),
+                        onPressed: () => controller.swipe(CardSwiperDirection.right),
+                      ),
+                    ),
+                  ],
+                ),
+
+              ),
             ],
           ),
         ),
@@ -124,6 +172,9 @@ class _GamePageState extends State<GamePage> {
                         controller: controller,
                         cardsCount: CardData.cards.length,
                         onSwipe: _onSwipe,
+                        onEnd: _onEnd,
+                        allowedSwipeDirection: AllowedSwipeDirection.only(left: true,right: true,down: false,up: false),
+                        numberOfCardsDisplayed: 4,
                         cardBuilder:
                             (
                               context,
