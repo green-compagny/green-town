@@ -9,7 +9,6 @@ import 'Model/CardData.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // Force portrait screen orientation
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   loadCards();
   runApp(const GreenTown());
@@ -18,11 +17,9 @@ void main() {
 class GreenTown extends StatelessWidget {
   const GreenTown({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Green town',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
