@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 
+import '../constants/Config.dart';
 import 'Impact.dart';
 
 Future<void> loadCards() async {
@@ -10,7 +11,7 @@ Future<void> loadCards() async {
 
   List<CardData> allCards = jsonList.map((json) => CardData.fromJson(json)).toList();
   allCards.shuffle();
-  CardData.cards = allCards.take(40).toList();
+  CardData.cards = allCards.take(Config.nbrCard).toList();
 }
 
 

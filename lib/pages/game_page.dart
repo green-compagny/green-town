@@ -4,6 +4,8 @@ import 'package:flutter_card_swiper/flutter_card_swiper.dart';
 import 'package:green_town/Model/CardData.dart';
 import 'package:green_town/constants/images_path.dart';
 
+import '../constants/Config.dart';
+
 void main() {
   runApp(GamePage());
 }
@@ -236,7 +238,7 @@ class _GamePageState extends State<GamePage> {
                 '👥 Société\n\n'
                 'Toutes commencent à 50. Si l’une tombe à 0, vous perdez.\n'
                 'Si vous atteignez 100, c’est le maximum !\n\n'
-                'La partie se termine après 40 décisions : vous serez alors jugé sur votre gestion.',
+                'La partie se termine après ${Config.nbrCard} décisions : vous serez alors jugé sur votre gestion.',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 16),
               ),
