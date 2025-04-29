@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../Model/CardData.dart';
 import 'game_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -10,6 +11,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  void loadAndPrintCards() async {
+    var cards = CardData.cards; // attend le résultat
+    for (var card in cards) {
+      print(card.question);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,6 +36,10 @@ class _HomePageState extends State<HomePage> {
             }, child: Text("Let's go !"),),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: loadAndPrintCards,
+        child: const Icon(Icons.print),
       ),
     );
   }
