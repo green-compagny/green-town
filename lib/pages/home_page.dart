@@ -80,6 +80,21 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       backgroundColor: const Color(0xFFd65c35),
       body: Stack(
         children: [
+          // Background Circle
+          Positioned(
+            top: MediaQuery.of(context).size.height / 2,
+            left: -MediaQuery.of(context).size.width * 0.5,
+            child: Container(
+              width: MediaQuery.of(context).size.width * 2,
+              height: MediaQuery.of(context).size.width * 2,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: const Color(0xFFb94e2a), // Slightly darker than background
+              ),
+            ),
+          ),
+
+          // Main Content
           Center(
             child: FadeTransition(
               opacity: _fadeAnimation,
@@ -127,6 +142,8 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
           ),
+
+          // Animated Splash Text
           Positioned(
             bottom: 32,
             left: 0,
