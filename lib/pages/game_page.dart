@@ -139,10 +139,26 @@ class _GamePageState extends State<GamePage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Partie terminée'),
-        content: const Text('Vous avez fini le jeu, bien joué ! Cliquez sur OK pour recommencer.'),
+        backgroundColor: const Color(0xFFF1F8E9),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: const Text(
+          'Partie terminée',
+          style: TextStyle(fontWeight: FontWeight.bold),
+          textAlign: TextAlign.center,
+        ),
+        content: const Text(
+          '🎉 Vous avez fini le jeu, bien joué !\n\nCliquez sur OK pour recommencer.',
+          textAlign: TextAlign.center,
+        ),
+        actionsAlignment: MainAxisAlignment.center,
         actions: [
           TextButton(
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.green,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+            ),
             onPressed: () {
               Navigator.of(context).pop();
               Navigator.pop(context);
@@ -158,10 +174,26 @@ class _GamePageState extends State<GamePage> {
     showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        title: const Text('Partie terminée'),
-        content: const Text('Vous avez perdu ! Une des jauges est arrivée à zéro.'),
+        backgroundColor: const Color(0xFFF1F8E9),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: const Text(
+          'Partie terminée',
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red),
+          textAlign: TextAlign.center,
+        ),
+        content: const Text(
+          '😢 Vous avez perdu !\nUne des jauges est tombée à zéro.',
+          textAlign: TextAlign.center,
+        ),
+        actionsAlignment: MainAxisAlignment.center,
         actions: [
           TextButton(
+            style: TextButton.styleFrom(
+              backgroundColor: Colors.red,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+            ),
             onPressed: () {
               Navigator.of(context).pop();
               Navigator.pop(context);
