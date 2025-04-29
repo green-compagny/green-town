@@ -5,7 +5,7 @@ import 'package:green_town/Model/CardData.dart';
 import 'package:green_town/constants/images_path.dart';
 
 void main() {
-  runApp(GamePage());
+  runApp(const GamePage());
 }
 
 class GamePage extends StatefulWidget {
@@ -27,236 +27,7 @@ class _GamePageState extends State<GamePage> {
   int society = 50;
 
   bool isTuto = true;
-
   int currentIndex = 0;
-
-  void _onEnd() {
-    currentIndex++;
-    showDialog(
-      context: context,
-      builder:
-          (context) => AlertDialog(
-            title: Text('Partie terminée'),
-            content: Text(
-              'Vous avez fini le jeu, bien joué ! Vous n\'avez pas perdu. Cliquez sur OK pour recommencer.',
-            ),
-            actions: [
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop(); // Ferme la boîte de dialogue
-                  Navigator.pop(
-                    context,
-                  ); // Ferme la page actuelle et revient en arrière
-                },
-                child: Text('OK'),
-              ),
-            ],
-          ),
-    );
-  }
-
-  void loseGame() {
-    showDialog(
-      context: context,
-      builder:
-          (context) => AlertDialog(
-            title: Text('Partie terminée'),
-            content: Text(
-              'Vous avez perdu ! Une des jauges est arrivée à zéro.',
-            ),
-            actions: [
-              TextButton(
-                onPressed: () {
-                  Navigator.of(context).pop(); // Ferme la boîte de dialogue
-                  Navigator.pop(
-                    context,
-                  ); // Ferme la page actuelle et revient en arrière
-                },
-                child: Text('OK'),
-              ),
-            ],
-          ),
-    );
-  }
-
-  void _onEndtuto() {
-    setState(() {
-      isTuto = false;
-    });
-  }
-
-  bool _onSwipe(
-    int previousIndex,
-    int? currentIndex,
-    CardSwiperDirection direction,
-  ) {
-    if (currentIndex == null) return true;
-    setState(() {
-      this.currentIndex = currentIndex;
-      if (direction == CardSwiperDirection.left) {
-        ecology += CardData.cards[currentIndex].impacts.no.ecology;
-        localEconomy += CardData.cards[currentIndex].impacts.no.localEconomy;
-        money += CardData.cards[currentIndex].impacts.no.money;
-        society += CardData.cards[currentIndex].impacts.no.society;
-      } else if (direction == CardSwiperDirection.right) {
-        ecology += CardData.cards[currentIndex].impacts.yes.ecology;
-        localEconomy += CardData.cards[currentIndex].impacts.yes.localEconomy;
-        money += CardData.cards[currentIndex].impacts.yes.money;
-        society += CardData.cards[currentIndex].impacts.yes.society;
-      }
-      ecology = ecology.clamp(0, 100);
-      localEconomy = localEconomy.clamp(0, 100);
-      money = money.clamp(0, 100);
-      society = society.clamp(0, 100);
-      gameIsLoos();
-    });
-    return true;
-  }
-
-  void gameIsLoos() {
-    if (ecology == 0 || localEconomy == 0 || money == 0 || society == 0) {
-      loseGame();
-    }
-  }
-
-  bool _onSwipeTuto(
-    int previousIndex,
-    int? currentIndex,
-    CardSwiperDirection direction,
-  ) {
-    if (direction == CardSwiperDirection.left) {
-      setState(() {
-        isTuto = false;
-      });
-    }
-    return true;
-  }
-
-  void buildCards() {
-    for (int i = 0; i < CardData.cards.length; i++) {
-      cards.add(
-        Card(
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.asset(
-                '${ImagePaths.assetsPath}${CardData.cards[i].img}',
-                fit: BoxFit.cover,
-                height: 200,
-              ),
-              SizedBox(height: 10),
-              Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    // Bouton rouge (refus)
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.red,
-                        shape: BoxShape.circle,
-                      ),
-                      child: IconButton(
-                        icon: Icon(Icons.close, color: Colors.white),
-                        onPressed:
-                            () => controller.swipe(CardSwiperDirection.left),
-                      ),
-                    ),
-
-                    // Bouton vert (validation)
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.green,
-                        shape: BoxShape.circle,
-                      ),
-                      child: IconButton(
-                        icon: Icon(Icons.check, color: Colors.white),
-                        onPressed:
-                            () => controller.swipe(CardSwiperDirection.right),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-    tutoCards.add(
-      Card(
-        margin: const EdgeInsets.all(16),
-        elevation: 4,
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // Texte explicatif
-              const Text(
-                'Bienvenue, Maire de Green Town !\n\n'
-                'Votre mission : prendre des décisions pour équilibrer écologie, économie locale, budget et société.\n\n'
-                'Swipez à droite pour accepter une proposition ✅,\nSwipez à gauche pour la refuser ❌.\n\n'
-                'Essayez maintenant de swiper à droite ou à gauche pour passer ce tutoriel.',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16),
-              ),
-              const SizedBox(height: 24),
-              Image.asset(
-                'assets/images/personne1.png', // mets l'image ici
-                height: 150,
-                fit: BoxFit.contain,
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-    tutoCards.add(
-      Card(
-        margin: const EdgeInsets.all(16),
-        elevation: 4,
-        child: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // Texte explicatif
-              const Text(
-                'Chaque décision que vous prenez influence 4 jauges :\n\n'
-                '🌍 Écologie '
-                '🏘️ Économie locale\n'
-                '💸 Argent '
-                '👥 Société\n\n'
-                'Toutes commencent à 50. Si l’une tombe à 0, vous perdez.\n'
-                'Si vous atteignez 100, c’est le maximum !\n\n'
-                'La partie se termine après 40 décisions : vous serez alors jugé sur votre gestion.',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16),
-              ),
-              const SizedBox(height: 16),
-              Image.asset(
-                'assets/images/point.png',
-                height: 150,
-                fit: BoxFit.contain,
-              ),
-              Image.asset(
-                'assets/images/personne2.png',
-                height: 150,
-                fit: BoxFit.contain,
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
 
   @override
   void initState() {
@@ -264,13 +35,170 @@ class _GamePageState extends State<GamePage> {
     super.initState();
   }
 
+  void buildCards() {
+    cards = CardData.cards.map((cardData) {
+      return Card(
+        margin: const EdgeInsets.all(16),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        elevation: 8,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(12),
+                child: Image.asset(
+                  '${ImagePaths.assetsPath}${cardData.img}',
+                  height: 180,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const SizedBox(height: 20),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  _buildSwipeButton(Icons.close, Colors.red, () {
+                    controller.swipe(CardSwiperDirection.left);
+                  }),
+                  _buildSwipeButton(Icons.check, Colors.green, () {
+                    controller.swipe(CardSwiperDirection.right);
+                  }),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
+    }).toList();
+
+    tutoCards = [
+      _buildTutoCard(
+        'Bienvenue, Maire de Green Town !\n\nVotre mission : prendre des décisions pour équilibrer écologie, économie locale, budget et société.\n\nSwipez à droite pour accepter ✅, à gauche pour refuser ❌.',
+        'assets/images/personne1.png',
+      ),
+      _buildTutoCard(
+        'Chaque décision influence 4 jauges :\n\n🌍 Écologie  🏘️ Économie locale\n💸 Argent  👥 Société\n\nSi une jauge tombe à 0, vous perdez.\nAprès 40 décisions, vous serez évalué.',
+        'assets/images/point.png',
+        extraImage: 'assets/images/personne2.png',
+      ),
+    ];
+  }
+
+  Widget _buildTutoCard(String text, String imagePath, {String? extraImage}) {
+    return Card(
+      margin: const EdgeInsets.all(16),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+      elevation: 6,
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(text, textAlign: TextAlign.center, style: const TextStyle(fontSize: 16)),
+            const SizedBox(height: 20),
+            Image.asset(imagePath, height: 150, fit: BoxFit.contain),
+            if (extraImage != null) ...[
+              const SizedBox(height: 12),
+              Image.asset(extraImage, height: 150, fit: BoxFit.contain),
+            ]
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSwipeButton(IconData icon, Color color, VoidCallback onTap) {
+    return GestureDetector(
+      onTap: onTap,
+      child: AnimatedScale(
+        scale: 1.0,
+        duration: const Duration(milliseconds: 100),
+        child: Container(
+          decoration: BoxDecoration(
+            color: color,
+            shape: BoxShape.circle,
+          ),
+          padding: const EdgeInsets.all(14),
+          child: Icon(icon, color: Colors.white),
+        ),
+      ),
+    );
+  }
+
+  void _onEnd() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Partie terminée'),
+        content: const Text('Vous avez fini le jeu, bien joué ! Cliquez sur OK pour recommencer.'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+              Navigator.pop(context);
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void loseGame() {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: const Text('Partie terminée'),
+        content: const Text('Vous avez perdu ! Une des jauges est arrivée à zéro.'),
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+              Navigator.pop(context);
+            },
+            child: const Text('OK'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  bool _onSwipe(int previousIndex, int? currentIndex, CardSwiperDirection direction) {
+    if (currentIndex == null) return true;
+
+    setState(() {
+      this.currentIndex = currentIndex;
+      final impacts = direction == CardSwiperDirection.left
+          ? CardData.cards[currentIndex].impacts.no
+          : CardData.cards[currentIndex].impacts.yes;
+
+      ecology = (ecology + impacts.ecology).clamp(0, 100);
+      localEconomy = (localEconomy + impacts.localEconomy).clamp(0, 100);
+      money = (money + impacts.money).clamp(0, 100);
+      society = (society + impacts.society).clamp(0, 100);
+
+      if ([ecology, localEconomy, money, society].any((e) => e == 0)) {
+        loseGame();
+      }
+    });
+
+    return true;
+  }
+
+  bool _onSwipeTuto(int prev, int? curr, CardSwiperDirection direction) {
+    if (direction == CardSwiperDirection.left || direction == CardSwiperDirection.right) {
+      setState(() => isTuto = false);
+    }
+    return true;
+  }
+
   void _handleKeyEvent(RawKeyEvent event) {
     if (event is RawKeyDownEvent) {
       if (event.logicalKey == LogicalKeyboardKey.arrowLeft) {
-        // Simule un swipe à gauche
         controller.swipe(CardSwiperDirection.left);
       } else if (event.logicalKey == LogicalKeyboardKey.arrowRight) {
-        // Simule un swipe à droite
         controller.swipe(CardSwiperDirection.right);
       }
     }
@@ -279,93 +207,82 @@ class _GamePageState extends State<GamePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Green Town',
+      theme: ThemeData(fontFamily: 'Roboto'),
       home: Scaffold(
-        appBar: AppBar(title: Text("Green Town")),
+        backgroundColor: const Color(0xFFF1F8E9),
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          title: Text(
+            "Green Town",
+            style: TextStyle(
+              color: Colors.teal.shade800,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          centerTitle: true,
+        ),
         body: RawKeyboardListener(
           focusNode: FocusNode(),
-          onKey: _handleKeyEvent, // Écoute des événements clavier
-          child:
-              currentIndex < CardData.cards.length
-                  ? Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.all(8),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            _buildCounter("Écologie", ecology, Colors.green),
-                            _buildCounter(
-                              "Économie locale",
-                              localEconomy,
-                              Colors.orange,
-                            ),
-                            _buildCounter("Argent", money, Colors.blue),
-                            _buildCounter("Société", society, Colors.purple),
-                          ],
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Text(
-                          isTuto
-                              ? "Tutoriel"
-                              : CardData.cards[currentIndex].question,
-                          style: const TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                          ),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                      isTuto
-                          ? Expanded(
-                            child: CardSwiper(
-                              key: const ValueKey('tuto'),
-                              isLoop: false,
-                              controller: controllerTuto,
-                              cardsCount: tutoCards.length,
-                              onSwipe: _onSwipeTuto,
-                              onEnd: _onEndtuto,
-                              allowedSwipeDirection:
-                                  const AllowedSwipeDirection.only(
-                                    left: true,
-                                    right: true,
-                                    down: false,
-                                    up: false,
-                                  ),
-                              numberOfCardsDisplayed: 1,
-                              cardBuilder:
-                                  (context, index, _, __) => tutoCards[index],
-                            ),
-                          )
-                          : Expanded(
-                            child: CardSwiper(
-                              key: const ValueKey('jeu'),
-                              isLoop: false,
-                              controller: controller,
-                              cardsCount: cards.length,
-                              onSwipe: _onSwipe,
-                              onEnd: _onEnd,
-                              allowedSwipeDirection:
-                                  const AllowedSwipeDirection.only(
-                                    left: true,
-                                    right: true,
-                                    down: false,
-                                    up: false,
-                                  ),
-                              numberOfCardsDisplayed: 4,
-                              cardBuilder:
-                                  (context, index, _, __) => cards[index],
-                            ),
-                          ),
-                    ],
-                  )
-                  : Center(
-                    child: Text(
-                      "Merci ! Vous avez répondu à toutes les questions.",
-                    ),
+          onKey: _handleKeyEvent,
+          child: currentIndex < CardData.cards.length
+              ? Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    _buildCounter("Écologie", ecology, Colors.green),
+                    _buildCounter("Économie locale", localEconomy, Colors.orange),
+                    _buildCounter("Argent", money, Colors.blue),
+                    _buildCounter("Société", society, Colors.purple),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(16),
+                child: Text(
+                  isTuto ? "Tutoriel" : CardData.cards[currentIndex].question,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                ),
+              ),
+              Expanded(
+                child: CardSwiper(
+                  key: ValueKey(isTuto ? 'tuto' : 'jeu'),
+                  isLoop: false,
+                  controller: isTuto ? controllerTuto : controller,
+                  cardsCount: isTuto ? tutoCards.length : cards.length,
+                  onSwipe: isTuto ? _onSwipeTuto : _onSwipe,
+                  onEnd: isTuto ? () => setState(() => isTuto = false) : _onEnd,
+                  allowedSwipeDirection: const AllowedSwipeDirection.only(
+                    left: true,
+                    right: true,
+                    up: false,
+                    down: false,
                   ),
+                  numberOfCardsDisplayed: 1,
+                  cardBuilder: (context, index, _, __) {
+                    final card = isTuto ? tutoCards[index] : cards[index];
+                    return AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 400),
+                      transitionBuilder: (child, animation) => SlideTransition(
+                        position: Tween<Offset>(
+                          begin: const Offset(0, 0.2),
+                          end: Offset.zero,
+                        ).animate(animation),
+                        child: FadeTransition(opacity: animation, child: child),
+                      ),
+                      child: card,
+                    );
+                  },
+                ),
+              ),
+            ],
+          )
+              : const Center(child: Text("Merci ! Vous avez répondu à toutes les questions.")),
         ),
       ),
     );
@@ -374,20 +291,34 @@ class _GamePageState extends State<GamePage> {
   Widget _buildCounter(String label, int value, Color color) {
     return Column(
       children: [
-        Text(label, style: TextStyle(fontWeight: FontWeight.bold)),
-        SizedBox(height: 4),
-        Container(
-          width: 40,
-          height: 40,
-          decoration: BoxDecoration(
-            color: color.withOpacity(0.2),
-            shape: BoxShape.circle,
-          ),
+        Text(label, style: const TextStyle(fontWeight: FontWeight.bold)),
+        const SizedBox(height: 6),
+        Stack(
           alignment: Alignment.center,
-          child: Text(
-            "$value",
-            style: TextStyle(color: color, fontWeight: FontWeight.bold),
-          ),
+          children: [
+            Container(
+              width: 60,
+              height: 60,
+              decoration: BoxDecoration(shape: BoxShape.circle, color: color.withOpacity(0.1)),
+            ),
+            TweenAnimationBuilder<double>(
+              tween: Tween<double>(begin: 0, end: value / 100),
+              duration: const Duration(milliseconds: 500),
+              builder: (context, val, _) {
+                return SizedBox(
+                  width: 50,
+                  height: 50,
+                  child: CircularProgressIndicator(
+                    value: val,
+                    color: color,
+                    backgroundColor: Colors.grey.shade300,
+                    strokeWidth: 5,
+                  ),
+                );
+              },
+            ),
+            Text("$value", style: TextStyle(color: color, fontWeight: FontWeight.bold)),
+          ],
         ),
       ],
     );
