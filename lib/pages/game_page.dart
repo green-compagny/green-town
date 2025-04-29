@@ -42,11 +42,12 @@ class _GamePageState extends State<GamePage> {
       return Card(
         margin: const EdgeInsets.all(16),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        elevation: 8,
+        elevation: 6,
         child: Padding(
           padding: const EdgeInsets.all(16),
           child: Column(
-            mainAxisSize: MainAxisSize.min,
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(12),
@@ -80,7 +81,7 @@ class _GamePageState extends State<GamePage> {
         'assets/images/personne1.png',
       ),
       _buildTutoCard(
-        'Chaque décision influence 4 jauges :\n\n🌍 Écologie  🏘️ Économie locale\n💸 Argent  👥 Société\n\nSi une jauge tombe à 0, vous perdez.\nAprès 40 décisions, vous serez évalué.',
+        'Chaque décision influence 4 jauges :\n\n🌍 Écologie  🏘️ Économie locale\n💸 Argent  👥 Société\n\nSi une jauge tombe à 0, vous perdez.\nAprès ${Config.nbrCard} décisions, vous serez évalué.',
         'assets/images/point.png',
         extraImage: 'assets/images/personne2.png',
       ),
@@ -94,17 +95,22 @@ class _GamePageState extends State<GamePage> {
       elevation: 6,
       child: Padding(
         padding: const EdgeInsets.all(16),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(text, textAlign: TextAlign.center, style: const TextStyle(fontSize: 16)),
-            const SizedBox(height: 20),
-            Image.asset(imagePath, height: 150, fit: BoxFit.contain),
-            if (extraImage != null) ...[
-              const SizedBox(height: 12),
-              Image.asset(extraImage, height: 150, fit: BoxFit.contain),
-            ]
+            Column(
+              mainAxisSize: MainAxisSize.max,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(text, textAlign: TextAlign.center, style: const TextStyle(fontSize: 16)),
+                const SizedBox(height: 20),
+                Image.asset(imagePath, height: 150, fit: BoxFit.contain),
+                if (extraImage != null) ...[
+                  const SizedBox(height: 12),
+                  Image.asset(extraImage, height: 150, fit: BoxFit.contain),
+                ]
+              ],
+            ),
           ],
         ),
       ),
@@ -213,24 +219,14 @@ class _GamePageState extends State<GamePage> {
       theme: ThemeData(fontFamily: 'Roboto'),
       home: Scaffold(
         backgroundColor: const Color(0xFFF1F8E9),
-        appBar: AppBar(
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          title: Text(
-            "Green Town",
-            style: TextStyle(
-              color: Colors.teal.shade800,
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-          centerTitle: true,
-        ),
         body: RawKeyboardListener(
           focusNode: FocusNode(),
           onKey: _handleKeyEvent,
           child: currentIndex < CardData.cards.length
               ? Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisSize: MainAxisSize.max,
             children: [
               Padding(
                 padding: const EdgeInsets.all(8),
