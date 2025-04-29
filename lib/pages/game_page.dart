@@ -95,7 +95,7 @@ class _GamePageState extends State<GamePage> {
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
-          mainAxisSize: MainAxisSize.max,
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(text, textAlign: TextAlign.center, style: const TextStyle(fontSize: 16)),
@@ -230,6 +230,7 @@ class _GamePageState extends State<GamePage> {
           onKey: _handleKeyEvent,
           child: currentIndex < CardData.cards.length
               ? Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
                 padding: const EdgeInsets.all(8),
@@ -265,7 +266,7 @@ class _GamePageState extends State<GamePage> {
                     up: false,
                     down: false,
                   ),
-                  numberOfCardsDisplayed: 1,
+                  numberOfCardsDisplayed: 2,
                   cardBuilder: (context, index, _, __) {
                     final card = isTuto ? tutoCards[index] : cards[index];
                     return AnimatedSwitcher(

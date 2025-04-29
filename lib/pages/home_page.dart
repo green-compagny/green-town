@@ -102,7 +102,6 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               ),
             ),
           ),
-
           // Main Content
           Center(
             child: FadeTransition(
