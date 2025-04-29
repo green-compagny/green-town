@@ -3,144 +3,1026 @@
     "question": "Lancer un marché hebdomadaire 100% producteurs locaux ?",
     "img": "1.png",
     "impacts": {
-      "yes": { "ecology": 5, "localEconomy": 7, "money": -3, "society": 4 },
-      "no": { "ecology": -4, "localEconomy": -6, "money": 2, "society": -3 }
+      "yes": {
+        "ecology": 5,
+        "localEconomy": 7,
+        "money": -3,
+        "society": 4
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": -6,
+        "money": 2,
+        "society": -3
+      }
     }
   },
   {
     "question": "Mettre en place une prime pour les fermes locales bio ?",
     "img": "2.png",
     "impacts": {
-      "yes": { "ecology": 6, "localEconomy": 6, "money": -5, "society": 5 },
-      "no": { "ecology": -5, "localEconomy": -5, "money": 3, "society": -4 }
+      "yes": {
+        "ecology": 6,
+        "localEconomy": 6,
+        "money": -5,
+        "society": 5
+      },
+      "no": {
+        "ecology": -5,
+        "localEconomy": -5,
+        "money": 3,
+        "society": -4
+      }
     }
   },
   {
     "question": "Interdire les grandes surfaces en centre-ville ?",
     "img": "3.png",
     "impacts": {
-      "yes": { "ecology": 4, "localEconomy": 4, "money": -6, "society": 3 },
-      "no": { "ecology": -3, "localEconomy": -2, "money": 3, "society": -2 }
+      "yes": {
+        "ecology": 4,
+        "localEconomy": 4,
+        "money": -6,
+        "society": 3
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": -2,
+        "money": 3,
+        "society": -2
+      }
     }
   },
   {
     "question": "Créer un festival des artisans et producteurs locaux ?",
     "img": "4.png",
     "impacts": {
-      "yes": { "ecology": 3, "localEconomy": 6, "money": -2, "society": 7 },
-      "no": { "ecology": -2, "localEconomy": -4, "money": 1, "society": -4 }
+      "yes": {
+        "ecology": 3,
+        "localEconomy": 6,
+        "money": -2,
+        "society": 7
+      },
+      "no": {
+        "ecology": -2,
+        "localEconomy": -4,
+        "money": 1,
+        "society": -4
+      }
     }
   },
   {
     "question": "Réserver des terrains municipaux pour des jardins partagés ?",
     "img": "5.png",
     "impacts": {
-      "yes": { "ecology": 7, "localEconomy": 5, "money": -4, "society": 6 },
-      "no": { "ecology": -5, "localEconomy": -2, "money": 2, "society": -4 }
+      "yes": {
+        "ecology": 7,
+        "localEconomy": 5,
+        "money": -4,
+        "society": 6
+      },
+      "no": {
+        "ecology": -5,
+        "localEconomy": -2,
+        "money": 2,
+        "society": -4
+      }
     }
   },
   {
     "question": "Donner des aides aux commerces de centre-ville ?",
     "img": "6.png",
     "impacts": {
-      "yes": { "ecology": 2, "localEconomy": 5, "money": -5, "society": 4 },
-      "no": { "ecology": -2, "localEconomy": -6, "money": 3, "society": -2 }
+      "yes": {
+        "ecology": 2,
+        "localEconomy": 5,
+        "money": -5,
+        "society": 4
+      },
+      "no": {
+        "ecology": -2,
+        "localEconomy": -6,
+        "money": 3,
+        "society": -2
+      }
     }
   },
   {
     "question": "Subventionner des restaurants utilisant des produits locaux ?",
     "img": "7.png",
     "impacts": {
-      "yes": { "ecology": 4, "localEconomy": 7, "money": -5, "society": 5 },
-      "no": { "ecology": -2, "localEconomy": -4, "money": 4, "society": -3 }
+      "yes": {
+        "ecology": 4,
+        "localEconomy": 7,
+        "money": -5,
+        "society": 5
+      },
+      "no": {
+        "ecology": -2,
+        "localEconomy": -4,
+        "money": 4,
+        "society": -3
+      }
     }
   },
   {
     "question": "Favoriser l'implantation d'entreprises locales durables ?",
     "img": "8.png",
     "impacts": {
-      "yes": { "ecology": 5, "localEconomy": 8, "money": -4, "society": 5 },
-      "no": { "ecology": -4, "localEconomy": -6, "money": 2, "society": -4 }
+      "yes": {
+        "ecology": 5,
+        "localEconomy": 8,
+        "money": -4,
+        "society": 5
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": -6,
+        "money": 2,
+        "society": -4
+      }
     }
   },
   {
     "question": "Limiter l'installation de multinationales sur la commune ?",
     "img": "9.png",
     "impacts": {
-      "yes": { "ecology": 4, "localEconomy": 5, "money": -6, "society": 3 },
-      "no": { "ecology": -4, "localEconomy": -4, "money": 4, "society": -2 }
+      "yes": {
+        "ecology": 4,
+        "localEconomy": 5,
+        "money": -6,
+        "society": 3
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": -4,
+        "money": 4,
+        "society": -2
+      }
     }
   },
   {
     "question": "Investir dans un réseau de transport public écoresponsable ?",
     "img": "10.png",
     "impacts": {
-      "yes": { "ecology": 8, "localEconomy": 4, "money": -7, "society": 5 },
-      "no": { "ecology": -7, "localEconomy": -3, "money": 4, "society": -5 }
+      "yes": {
+        "ecology": 8,
+        "localEconomy": 4,
+        "money": -7,
+        "society": 5
+      },
+      "no": {
+        "ecology": -7,
+        "localEconomy": -3,
+        "money": 4,
+        "society": -5
+      }
     }
   },
   {
     "question": "Installer des panneaux solaires sur les bâtiments publics ?",
     "img": "11.png",
     "impacts": {
-      "yes": { "ecology": 7, "localEconomy": 5, "money": -7, "society": 4 },
-      "no": { "ecology": -4, "localEconomy": -4, "money": 5, "society": -3 }
+      "yes": {
+        "ecology": 7,
+        "localEconomy": 5,
+        "money": -7,
+        "society": 4
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": -4,
+        "money": 5,
+        "society": -3
+      }
     }
   },
   {
     "question": "Planter 1000 arbres dans les espaces publics ?",
     "img": "12.png",
     "impacts": {
-      "yes": { "ecology": 9, "localEconomy": 3, "money": -4, "society": 6 },
-      "no": { "ecology": -3, "localEconomy": -2, "money": 3, "society": -5 }
+      "yes": {
+        "ecology": 9,
+        "localEconomy": 3,
+        "money": -4,
+        "society": 6
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": -2,
+        "money": 3,
+        "society": -5
+      }
     }
   },
   {
     "question": "Développer des pistes cyclables en ville ?",
     "img": "13.png",
     "impacts": {
-      "yes": { "ecology": 7, "localEconomy": 4, "money": -4, "society": 5 },
-      "no": { "ecology": -5, "localEconomy": -3, "money": 2, "society": -4 }
+      "yes": {
+        "ecology": 7,
+        "localEconomy": 4,
+        "money": -4,
+        "society": 5
+      },
+      "no": {
+        "ecology": -5,
+        "localEconomy": -3,
+        "money": 2,
+        "society": -4
+      }
     }
   },
   {
     "question": "Organiser une fête annuelle des produits locaux ?",
     "img": "14.png",
     "impacts": {
-      "yes": { "ecology": 3, "localEconomy": 6, "money": -3, "society": 7 },
-      "no": { "ecology": 0, "localEconomy":-2, "money": 1, "society": -4 }
+      "yes": {
+        "ecology": 3,
+        "localEconomy": 6,
+        "money": -3,
+        "society": 7
+      },
+      "no": {
+        "ecology": 0,
+        "localEconomy": -2,
+        "money": 1,
+        "society": -4
+      }
     }
   },
   {
     "question": "Proposer des formations pour futurs agriculteurs bio ?",
     "img": "15.png",
     "impacts": {
-      "yes": { "ecology": 6, "localEconomy": 7, "money": -5, "society": 6 },
-      "no": { "ecology": -1, "localEconomy": -3, "money": 3, "society": -5 }
+      "yes": {
+        "ecology": 6,
+        "localEconomy": 7,
+        "money": -5,
+        "society": 6
+      },
+      "no": {
+        "ecology": -1,
+        "localEconomy": -3,
+        "money": 3,
+        "society": -5
+      }
     }
   },
   {
     "question": "Financer une cantine scolaire 100% locale ?",
     "img": "16.png",
     "impacts": {
-      "yes": { "ecology": 5, "localEconomy": 8, "money": -6, "society": 7 },
-      "no": { "ecology": -2, "localEconomy": -2, "money": 3, "society": -4 }
+      "yes": {
+        "ecology": 5,
+        "localEconomy": 8,
+        "money": -6,
+        "society": 7
+      },
+      "no": {
+        "ecology": -2,
+        "localEconomy": -2,
+        "money": 3,
+        "society": -4
+      }
     }
   },
   {
     "question": "Créer un label 'Ville durable' pour les commerces ?",
-    "img": "5.png",
+    "img": "17.png",
     "impacts": {
-      "yes": { "ecology": 4, "localEconomy": 6, "money": -2, "society": 4 },
-      "no": { "ecology": -3, "localEconomy": -5, "money": 1, "society": -3 }
+      "yes": {
+        "ecology": 4,
+        "localEconomy": 6,
+        "money": -2,
+        "society": 4
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": -5,
+        "money": 1,
+        "society": -3
+      }
     }
   },
   {
     "question": "Ouvrir un centre d'information sur la consommation locale ?",
-    "img": "6.png",
+    "img": "18.png",
     "impacts": {
-      "yes": { "ecology": 4, "localEconomy": 5, "money": -2, "society": 5 },
-      "no": { "ecology": -2, "localEconomy": -4, "money": 1, "society": -3 }
+      "yes": {
+        "ecology": 4,
+        "localEconomy": 5,
+        "money": -2,
+        "society": 5
+      },
+      "no": {
+        "ecology": -2,
+        "localEconomy": -4,
+        "money": 1,
+        "society": -3
+      }
+    }
+  },
+  {
+    "question": "Instaurer une taxe carbone municipale ?",
+    "img": "19.png",
+    "impacts": {
+      "yes": {
+        "ecology": 9,
+        "localEconomy": 2,
+        "money": -8,
+        "society": 3
+      },
+      "no": {
+        "ecology": -5,
+        "localEconomy": -3,
+        "money": 5,
+        "society": -4
+      }
+    }
+  },
+  {
+    "question": "Encourager les véhicules électriques dans la ville ?",
+    "img": "20.png",
+    "impacts": {
+      "yes": {
+        "ecology": 8,
+        "localEconomy": 4,
+        "money": -6,
+        "society": 5
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": -2,
+        "money": 3,
+        "society": -3
+      }
+    }
+  },
+  {
+    "question": "Augmenter le nombre de zones piétonnes ?",
+    "img": "21.png",
+    "impacts": {
+      "yes": {
+        "ecology": 7,
+        "localEconomy": 3,
+        "money": -5,
+        "society": 6
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": -2,
+        "money": 4,
+        "society": -2
+      }
+    }
+  },
+  {
+    "question": "Proposer des subventions pour les énergies renouvelables domestiques ?",
+    "img": "22.png",
+    "impacts": {
+      "yes": {
+        "ecology": 8,
+        "localEconomy": 5,
+        "money": -7,
+        "society": 4
+      },
+      "no": {
+        "ecology": -5,
+        "localEconomy": -3,
+        "money": 6,
+        "society": -1
+      }
+    }
+  },
+  {
+    "question": "Offrir des réductions fiscales pour les entreprises locales ?",
+    "img": "23.png",
+    "impacts": {
+      "yes": {
+        "ecology": 4,
+        "localEconomy": 7,
+        "money": -6,
+        "society": 4
+      },
+      "no": {
+        "ecology": -2,
+        "localEconomy": -5,
+        "money": 3,
+        "society": -2
+      }
+    }
+  },
+  {
+    "question": "Construire des logements écologiques dans la commune ?",
+    "img": "24.png",
+    "impacts": {
+      "yes": {
+        "ecology": 7,
+        "localEconomy": 5,
+        "money": -8,
+        "society": 6
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": -2,
+        "money": 5,
+        "society": -4
+      }
+    }
+  },
+  {
+    "question": "Créer un programme de recyclage pour tous les foyers ?",
+    "img": "25.png",
+    "impacts": {
+      "yes": {
+        "ecology": 9,
+        "localEconomy": 3,
+        "money": -4,
+        "society": 7
+      },
+      "no": {
+        "ecology": -2,
+        "localEconomy": -1,
+        "money": 2,
+        "society": -3
+      }
+    }
+  },
+  {
+    "question": "Encourager les entreprises à utiliser des emballages recyclés ?",
+    "img": "26.png",
+    "impacts": {
+      "yes": {
+        "ecology": 6,
+        "localEconomy": 4,
+        "money": -3,
+        "society": 5
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": -2,
+        "money": 2,
+        "society": -2
+      }
+    }
+  },
+  {
+    "question": "Créer un réseau de fermes urbaines ?",
+    "img": "27.png",
+    "impacts": {
+      "yes": {
+        "ecology": 7,
+        "localEconomy": 6,
+        "money": -6,
+        "society": 5
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": -4,
+        "money": 3,
+        "society": -2
+      }
+    }
+  },
+  {
+    "question": "Organiser des ateliers d'éducation à l'environnement pour les jeunes ?",
+    "img": "28.png",
+    "impacts": {
+      "yes": {
+        "ecology": 6,
+        "localEconomy": 3,
+        "money": -2,
+        "society": 8
+      },
+      "no": {
+        "ecology": -2,
+        "localEconomy": -3,
+        "money": 4,
+        "society": -1
+      }
+    }
+  },
+  {
+    "question": "Mettre en place une gestion des déchets plus stricte ?",
+    "img": "29.png",
+    "impacts": {
+      "yes": {
+        "ecology": 9,
+        "localEconomy": 4,
+        "money": -5,
+        "society": 6
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": -3,
+        "money": 3,
+        "society": -2
+      }
+    }
+  },
+  {
+    "question": "Réduire les subventions aux grandes entreprises polluantes ?",
+    "img": "30.png",
+    "impacts": {
+      "yes": {
+        "ecology": 8,
+        "localEconomy": 2,
+        "money": -7,
+        "society": 4
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": -2,
+        "money": 6,
+        "society": -3
+      }
+    }
+  },
+  {
+    "question": "Mettre en place un système de troc local pour les produits alimentaires ?",
+    "img": "31.png",
+    "impacts": {
+      "yes": {
+        "ecology": 5,
+        "localEconomy": 6,
+        "money": -2,
+        "society": 7
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": -5,
+        "money": 2,
+        "society": -4
+      }
+    }
+  },
+  {
+    "question": "Introduire des horaires de travail plus flexibles pour réduire la pollution ?",
+    "img": "32.png",
+    "impacts": {
+      "yes": {
+        "ecology": 6,
+        "localEconomy": 5,
+        "money": -3,
+        "society": 6
+      },
+      "no": {
+        "ecology": -2,
+        "localEconomy": -1,
+        "money": 4,
+        "society": -2
+      }
+    }
+  },
+  {
+    "question": "Mettre en place des événements culturels gratuits pour la communauté ?",
+    "img": "33.png",
+    "impacts": {
+      "yes": {
+        "ecology": 4,
+        "localEconomy": 6,
+        "money": -3,
+        "society": 8
+      },
+      "no": {
+        "ecology": -2,
+        "localEconomy": -4,
+        "money": 2,
+        "society": -1
+      }
+    }
+  },
+  {
+    "question": "Subventionner les systèmes de purification de l'air pour les écoles ?",
+    "img": "34.png",
+    "impacts": {
+      "yes": {
+        "ecology": 7,
+        "localEconomy": 3,
+        "money": -5,
+        "society": 6
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": -3,
+        "money": 4,
+        "society": -2
+      }
+    }
+  },
+  {
+    "question": "Construire un marché de produits bio dans chaque quartier ?",
+    "img": "35.png",
+    "impacts": {
+      "yes": {
+        "ecology": 8,
+        "localEconomy": 7,
+        "money": -6,
+        "society": 6
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": -2,
+        "money": 3,
+        "society": -3
+      }
+    }
+  },
+  {
+    "question": "Supprimer totalement les véhicules à essence dans la ville d'ici 10 ans ?",
+    "img": "36.png",
+    "impacts": {
+      "yes": {
+        "ecology": 10,
+        "localEconomy": 6,
+        "money": -10,
+        "society": 8
+      },
+      "no": {
+        "ecology": -5,
+        "localEconomy": -3,
+        "money": 5,
+        "society": -6
+      }
+    }
+  },
+  {
+    "question": "Interdire toutes les grandes entreprises polluantes sur le territoire de la commune ?",
+    "img": "37.png",
+    "impacts": {
+      "yes": {
+        "ecology": 9,
+        "localEconomy": 3,
+        "money": -7,
+        "society": 7
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": -6,
+        "money": 6,
+        "society": -5
+      }
+    }
+  },
+  {
+    "question": "Fermer progressivement les centrales nucléaires locales et investir massivement dans les énergies renouvelables ?",
+    "img": "38.png",
+    "impacts": {
+      "yes": {
+        "ecology": 10,
+        "localEconomy": 5,
+        "money": -8,
+        "society": 9
+      },
+      "no": {
+        "ecology": -6,
+        "localEconomy": -7,
+        "money": 8,
+        "society": -6
+      }
+    }
+  },
+  {
+    "question": "Interdire l'usage de pesticides pour tous les agriculteurs locaux ?",
+    "img": "39.png",
+    "impacts": {
+      "yes": {
+        "ecology": 4,
+        "localEconomy": -8,
+        "money": -7,
+        "society": -5
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": 3,
+        "money": 5,
+        "society": 2
+      }
+    }
+  },
+  {
+    "question": "Lancer une campagne annuelle de nettoyage participatif de la nature ?",
+    "img": "40.png",
+    "impacts": {
+      "yes": {
+        "ecology": 6,
+        "localEconomy": 3,
+        "money": -2,
+        "society": 5
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": -2,
+        "money": 1,
+        "society": -3
+      }
+    }
+  },
+  {
+    "question": "Encourager l'ouverture de centres commerciaux à grande échelle en ville ?",
+    "img": "41.png",
+    "impacts": {
+      "yes": {
+        "ecology": -6,
+        "localEconomy": -5,
+        "money": 8,
+        "society": 6
+      },
+      "no": {
+        "ecology": 2,
+        "localEconomy": 4,
+        "money": 3,
+        "society": 0
+      }
+    }
+  },
+  {
+    "question": "Déléguer la gestion des espaces publics à des entreprises privées ?",
+    "img": "41.png",
+    "impacts": {
+      "yes": {
+        "ecology": -5,
+        "localEconomy": -3,
+        "money": 7,
+        "society": 5
+      },
+      "no": {
+        "ecology": 3,
+        "localEconomy": 4,
+        "money": -3,
+        "society": 3
+      }
+    }
+  },
+  {
+    "question": "Offrir des incitations fiscales pour les grandes entreprises multinationales ?",
+    "img": "41.png",
+    "impacts": {
+      "yes": {
+        "ecology": -10,
+        "localEconomy": -9,
+        "money": 10,
+        "society": 0
+      },
+      "no": {
+        "ecology": 2,
+        "localEconomy": 7,
+        "money": -5,
+        "society": 0
+      }
+    }
+  },
+  {
+    "question": "Autoriser la construction de nouveaux complexes industriels en périphérie de la ville ?",
+    "img": "41.png",
+    "impacts": {
+      "yes": {
+        "ecology": -9,
+        "localEconomy": -6,
+        "money": -5,
+        "society": 12
+      },
+      "no": {
+        "ecology": 3,
+        "localEconomy": 5,
+        "money": 4,
+        "society": -2
+      }
+    }
+  },
+  {
+    "question": "Favoriser l'implantation de grandes surfaces dans les zones rurales ?",
+    "img": "41.png",
+    "impacts": {
+      "yes": {
+        "ecology": -6,
+        "localEconomy": -3,
+        "money": 8,
+        "society": 5
+      },
+      "no": {
+        "ecology": 2,
+        "localEconomy": 4,
+        "money": 2,
+        "society": 3
+      }
+    }
+  },
+  {
+    "question": "Développer des zones commerciales sans restrictions écologiques strictes ?",
+    "img": "41.png",
+    "impacts": {
+      "yes": {
+        "ecology": -12,
+        "localEconomy": -2,
+        "money": 15,
+        "society": 4
+      },
+      "no": {
+        "ecology": 1,
+        "localEconomy": 3,
+        "money": 2,
+        "society": 3
+      }
+    }
+  },
+  {
+    "question": "Investir dans des infrastructures touristiques massives ?",
+    "img": "41.png",
+    "impacts": {
+      "yes": {
+        "ecology": -10,
+        "localEconomy": -2,
+        "money": 12,
+        "society": 6
+      },
+      "no": {
+        "ecology": 2,
+        "localEconomy": 4,
+        "money": 3,
+        "society": 2
+      }
+    }
+  },
+  {
+    "question": "Augmenter la consommation de biens importés par des réductions fiscales ?",
+    "img": "41.png",
+    "impacts": {
+      "yes": {
+        "ecology": -6,
+        "localEconomy": -4,
+        "money": 9,
+        "society": 5
+      },
+      "no": {
+        "ecology": 1,
+        "localEconomy": 3,
+        "money": 4,
+        "society": 2
+      }
+    }
+  },
+  {
+    "question": "Interdire l'utilisation de pesticides chimiques dans les fermes locales ?",
+    "img": "42.png",
+    "impacts": {
+      "yes": {
+        "ecology": 8,
+        "localEconomy": -6,
+        "money": -5,
+        "society": -3
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": 3,
+        "money": 2,
+        "society": 1
+      }
+    }
+  },
+  {
+    "question": "Interdire les engrais chimiques dans l'agriculture locale ?",
+    "img": "42.png",
+    "impacts": {
+      "yes": {
+        "ecology": 7,
+        "localEconomy": 5,
+        "money": -4,
+        "society": -2
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": -1,
+        "money": 2,
+        "society": 1
+      }
+    }
+  },
+  {
+    "question": "Imposer des pratiques agricoles durables à toutes les fermes locales ?",
+    "img": "42.png",
+    "impacts": {
+      "yes": {
+        "ecology": 8,
+        "localEconomy": -5,
+        "money": -3,
+        "society": 1
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": 3,
+        "money": 2,
+        "society": 2
+      }
+    }
+  },
+  {
+    "question": "Réduire l'usage de l'eau pour l'irrigation dans les fermes locales ?",
+    "img": "42.png",
+    "impacts": {
+      "yes": {
+        "ecology": 9,
+        "localEconomy": -5,
+        "money": -4,
+        "society": -2
+      },
+      "no": {
+        "ecology": -5,
+        "localEconomy": 2,
+        "money": 2,
+        "society": 1
+      }
+    }
+  },
+  {
+    "question": "Interdire l'importation de produits agricoles non bio dans la commune ?",
+    "img": "42.png",
+    "impacts": {
+      "yes": {
+        "ecology": 8,
+        "localEconomy": -7,
+        "money": -5,
+        "society": -4
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": 3,
+        "money": 2,
+        "society": 2
+      }
+    }
+  },
+  {
+    "question": "Imposer des sanctions aux fermes qui ne respectent pas les normes écologiques ?",
+    "img": "42.png",
+    "impacts": {
+      "yes": {
+        "ecology": 9,
+        "localEconomy": -6,
+        "money": -6,
+        "society": -3
+      },
+      "no": {
+        "ecology": -5,
+        "localEconomy": 2,
+        "money": 2,
+        "society": 1
+      }
+    }
+  },
+  {
+    "question": "Augmenter les subventions pour l'agriculture biologique uniquement ?",
+    "img": "42.png",
+    "impacts": {
+      "yes": {
+        "ecology": 7,
+        "localEconomy": -4,
+        "money": -5,
+        "society": -2
+      },
+      "no": {
+        "ecology": -3,
+        "localEconomy": 3,
+        "money": 2,
+        "society": 1
+      }
+    }
+  },
+  {
+    "question": "Interdire la culture de certaines plantes non autochtones nuisibles à l'écosystème local ?",
+    "img": "42.png",
+    "impacts": {
+      "yes": {
+        "ecology": 9,
+        "localEconomy": -5,
+        "money": -4,
+        "society": -3
+      },
+      "no": {
+        "ecology": -4,
+        "localEconomy": 2,
+        "money": 2,
+        "society": 1
+      }
+    }
+  },
+  {
+    "question": "Encourager l'agriculture urbaine dans toutes les zones résidentielles ?",
+    "img": "42.png",
+    "impacts": {
+      "yes": {
+        "ecology": 6,
+        "localEconomy": -4,
+        "money": -3,
+        "society": 4
+      },
+      "no": {
+        "ecology": -2,
+        "localEconomy": 2,
+        "money": 3,
+        "society": 1
+      }
     }
   }
 ]

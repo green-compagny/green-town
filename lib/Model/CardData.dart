@@ -7,8 +7,12 @@ import 'Impact.dart';
 Future<void> loadCards() async {
   final String jsonString = await rootBundle.loadString('assets/data.json');
   final List<dynamic> jsonList = jsonDecode(jsonString);
-  CardData.cards = jsonList.map((json) => CardData.fromJson(json)).toList();
+
+  List<CardData> allCards = jsonList.map((json) => CardData.fromJson(json)).toList();
+  allCards.shuffle();
+  CardData.cards = allCards.take(40).toList();
 }
+
 
 class CardData {
   final String question;

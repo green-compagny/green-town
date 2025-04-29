@@ -74,6 +74,15 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     super.dispose();
   }
 
+  Future<void> _navigateToGamePage() async {
+    await loadCards();
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => GamePage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,10 +111,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                       const SizedBox(height: 24),
                       ElevatedButton(
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => GamePage()),
-                          );
+                          _navigateToGamePage();
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFFE8F5E9),
