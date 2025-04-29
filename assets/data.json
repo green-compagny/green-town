@@ -1,0 +1,18 @@
+[
+  {
+    "question": "Lancer un marché hebdomadaire 100% producteurs locaux ?",
+    "img": "img.png",
+    "impacts": {
+      "yes": { "ecology": 5, "localEconomy": 7, "money": -3, "society": 4 },
+      "no": { "ecology": -4, "localEconomy": -6, "money": 2, "society": -3 }
+    }
+  },
+  {
+    "question": "Question 2",
+    "img": "img.png",
+    "impacts": {
+      "yes": { "ecology": 5, "localEconomy": 7, "money": -3, "society": 4 },
+      "no": { "ecology": -4, "localEconomy": -6, "money": 2, "society": -3 }
+    }
+  }
+]

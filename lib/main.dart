@@ -1,7 +1,17 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:green_town/pages/home_page.dart';
 
+import 'Model/CardData.dart';
+
+
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  // Force portrait screen orientation
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  loadCards();
   runApp(const GreenTown());
 }
 
